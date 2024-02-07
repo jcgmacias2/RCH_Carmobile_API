@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ADDESAPI.Core</id>
+    <version>1.0.0</version>
+    <authors>ADDESAPI.Core</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.Extensions.Configuration.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Proteo5.HL" version="0.7.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Admin\Documents\GitHub\ADDES_API_APP\ADEES_API\ADDESAPI.Core\bin\Release\net6.0\ADDESAPI.Core.dll" target="lib\net6.0\ADDESAPI.Core.dll" />
+  </files>
+</package>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Proteo5.HL" Version="0.7.2" />
+    <PackageReference Include="RepoDb" Version="1.13.1" />
+    <PackageReference Include="RepoDb.SqlServer" Version="1.13.1" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ADDESAPI.Core\ADDESAPI.Core.csproj" />
+  </ItemGroup>
+
+</Project>

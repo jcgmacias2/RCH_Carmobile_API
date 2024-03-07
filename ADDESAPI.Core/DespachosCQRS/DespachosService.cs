@@ -111,7 +111,8 @@ namespace ADDESAPI.Core.DespachosCQRS
                     foreach (var item in Despachos)
                     {
                         item.Detalle = new List<DespachoDetalleAppDTO>();
-                        item.Detalle = ResultDetalle.Data.Where(i => i.Despacho == item.Transaccion).ToList();
+                        item.Detalle = ResultDetalle.Data.Where(i => i.Despacho == item.Despacho && i.Total > 0).ToList();
+                        item.Total = ResultDetalle.Data.Where(i => i.Despacho == item.Despacho).Sum(i => i.Total);
                     }
                 }
                 Despachos.ToList().ForEach(d => { d.Transaccion = $"{d.Transaccion}0"; });

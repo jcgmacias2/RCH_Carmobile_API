@@ -61,7 +61,7 @@ namespace ADDESAPI.Infrastructure
             ResultMultiple<DespachoAppDTO> Result = new ResultMultiple<DespachoAppDTO>();
             try
             {
-                string sql = $"SELECT TOP 3 Despacho 'Transaccion', Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago, SUM(Total) Total FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Bomba = {bomba} AND SUBSTRING(CAST(Transaccion AS VARCHAR(25)), LEN(Transaccion), 1) = '0' /*AND Total > 0*/ GROUP BY Despacho, Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago, lognew ORDER BY lognew DESC";
+                string sql = $"SELECT TOP 3 Despacho 'Transaccion', Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago, SUM(Total) Total, Despacho FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Bomba = {bomba} AND SUBSTRING(CAST(Transaccion AS VARCHAR(25)), LEN(Transaccion), 1) = '0' /*AND Total > 0*/ GROUP BY Despacho, Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago, lognew ORDER BY lognew DESC";
                 using var connection = new SqlConnection(_connectionString);
                 var req = await connection.ExecuteQueryAsync<DespachoAppDTO>(sql);
 

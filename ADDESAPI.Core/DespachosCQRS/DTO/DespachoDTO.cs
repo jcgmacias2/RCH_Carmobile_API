@@ -69,6 +69,7 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public double Total { get; set; }
         public int IdTipoPago { get; set; }
         public string TipoPago { get; set; }
+        public string Despacho { get; set; }
         public List<DespachoDetalleAppDTO> Detalle { get; set; }
 
     }

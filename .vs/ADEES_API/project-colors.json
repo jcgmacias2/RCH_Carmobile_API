@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cdd26ca2-410a-414f-b88d-cbecc868b154": {
+      "ProjectGuid": "cdd26ca2-410a-414f-b88d-cbecc868b154",
+      "DisplayName": "ADDESAPI.Core",
+      "ColorIndex": 0
+    },
+    "91a7a13a-0863-406c-9fea-d036bbcf0986": {
+      "ProjectGuid": "91a7a13a-0863-406c-9fea-d036bbcf0986",
+      "DisplayName": "ADEES_API.WebAPI",
+      "ColorIndex": 1
+    },
+    "0f46def5-e22c-4202-85bf-f4d85fc11eb5": {
+      "ProjectGuid": "0f46def5-e22c-4202-85bf-f4d85fc11eb5",
+      "DisplayName": "ADDESAPI.Infrastructure",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

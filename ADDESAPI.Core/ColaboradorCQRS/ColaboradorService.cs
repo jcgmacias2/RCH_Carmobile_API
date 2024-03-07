@@ -107,7 +107,14 @@ namespace ADDESAPI.Core.Colaborador
                             lstAsignaciones.Add(asignacion);
                         }
                         colaboradorDTO.Asignacion = lstAsignaciones;
-                    
+
+                    }
+                    else
+                    {
+                        Result.Success = false;
+                        Result.Error = ResultAsignacion.Error;
+                        Result.Message = ResultAsignacion.Message;
+                        return Result;
                     }
 
 

@@ -18,21 +18,23 @@ namespace ADDESAPI.Infrastructure
         public readonly string _connectionString;
         public readonly string _connectionStringAddes; 
         public readonly int _gasolinera;
+        public readonly int _estacion;
         public FajillaResource(IConfiguration configuration)
         {
             _configuration = configuration;
             _connectionString = _configuration["ConnectionStrings:DefaultConnection"];
             _connectionStringAddes = _configuration["ConnectionStrings:AddesConnection"];
             _gasolinera = int.Parse(_configuration["Settings:Gasolinera"]);
+            _estacion = int.Parse(_configuration["Settings:Estacion"]);
         }
-        public async Task<ResultMultiple<vFajillas>> GetFajillasColaborador(string fecha, int noEmpleado, int estacion, int turno)
+        public async Task<ResultMultiple<vFajillas>> GetFajillasColaborador(string fecha, int noEmpleado, int turno)
         {
             ResultMultiple<vFajillas> Result = new ResultMultiple<vFajillas>();
             try
             {
                 vFajillas Fajillas = new vFajillas();
 
-                string sql = $"SELECT * FROM vFajillas WHERE CAST(Fecha AS DATE) = '{fecha}' AND NoEmpleado = {noEmpleado} AND NoEstacion = {estacion} AND Turno = {turno}";
+                string sql = $"SELECT * FROM vFajillas WHERE CAST(Fecha AS DATE) = '{fecha}' AND NoEmpleado = {noEmpleado} AND NoEstacion = {_estacion} AND Turno = {turno}";
                 using var connection = new SqlConnection(_connectionStringAddes);
                 var request = await connection.ExecuteQueryAsync<vFajillas>(sql);
 

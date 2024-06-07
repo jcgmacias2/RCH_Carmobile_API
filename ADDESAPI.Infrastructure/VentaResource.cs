@@ -53,12 +53,12 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultMultiple<vVenta>> GetVentaDespachosTurno(string fecha, int turno, int bomba)
+        public async Task<ResultMultiple<vVenta>> GetVentaDespachosTurno(string fecha, int turno, int noEmpleado)
         {
             ResultMultiple<vVenta> Result = new ResultMultiple<vVenta>();
             try
             {
-                string sql = $"SELECT Fecha, Gasolinera, Turno, Isla, Bomba, NoBomba, IdProducto, Producto, Cantidad, Total FROM vVentaDespachos WHERE Fecha = '{fecha}' AND Turno = {turno} AND NoBomba = {bomba} AND IdProducto != 0";
+                string sql = $"SELECT Fecha, Gasolinera, Turno, Isla, Bomba, NoBomba, IdProducto, Producto, Cantidad, Total, NoEmpleado, TipoPago FROM vVentaDespachos WHERE Fecha = '{fecha}' AND Turno = {turno} AND NoEmpleado = {noEmpleado} AND IdProducto != 0";
                 using var connection = new SqlConnection(_connectionString);
                 var req = await connection.ExecuteQueryAsync<vVenta>(sql);
 

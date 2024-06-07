@@ -9,6 +9,8 @@ namespace ADDESAPI.Core.DespachosCQRS
         Task<ResultSingle<vDespachos>> GetDespacho(int despacho);
         Task<ResultMultiple<vDespachos>> GetDespachoDetalle(int despacho);
         Task<Result> SetTipoPago(int despacho, int tipoPago);
-        Task<ResultMultiple<DespachoDetalleAppDTO>> GetDespachosApp(string despachos);
+        //Task<ResultMultiple<DespachoDetalleAppDTO>> GetDespachosApp(string despachos);
+        Task<ResultSingle<RedemptionDTO>> Redemption(RedemptionReq req);
+        Task<ResultSingle<RedemptionDTO>> RewardRedemption(RedemptionReq req);
     }
 }

@@ -14,5 +14,14 @@ namespace ADDESAPI.Core.GTCQRS
         Task<ResultSingle<string>> GetToken();
         Task<ResultSingle<GTCommandResponse>> SendCommand(string command, string token);
         Task<Result> SetPreset(string token, PresetDTO preset/*, string jsonPreset*/);
+        Task<Result> SetTypeBombas(string token, string json);
+        Task<ResultMultiple<ApiGtBombasResponse>> GetTypeBombas(string token);
+        Task<Result> SetTypeBomba(string token, int bomba, int modo);
+        Task<Result> RestartSGPM(string token);
+        Task<ResultMultiple<EstructuraBombaDTO>> GetEstructuraBomba(string token, int bomba);
+        Task<Result> CancelarPreset(string token, int bomba);
+        Task<ResultSingle<ApiGtAnticipoRes>> AddAnticipo(string token, string json);
+        Task<Result> SetDiscount(int transaccion, double discount, string cardNumber, string promotion, int idPromotion, double littersApp, string clientName);
+        Task<ResultSingle<DiscountDTO>> GetDiscount(string transaccion);
     }
 }

@@ -50,5 +50,11 @@ namespace ADEES_API.WebAPI.Controllers
         {
             return await _service.GetTurno();
         }
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ResultMultiple<FormaPago>> GetFormasPago()
+        {
+            return await _service.GetFormasPago();
+        }
     }
 }

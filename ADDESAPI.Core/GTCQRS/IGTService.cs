@@ -11,5 +11,11 @@ namespace ADDESAPI.Core.GTCQRS
     public interface IGTService
     {
         Task<Result> Preset(PresetDTO request);
+        Task<Result> SetTypeBombas(SetBombasTypeDTO request);
+        Task<Result> SetTypeBomba(SetBombaTypeDTO request);
+        Task<ResultSingle<BombasTypeDTO>> GetTypeBombas();
+        Task<ResultMultiple<EstructuraBombaDTO>> GetEstructuraBomba(GetEstructuraDTO request);
+        Task<Result> CancelarPreset(GetEstructuraDTO request);
+        Task<ResultSingle<ApiGtAnticipoRes>> AddAnticipo(AddAnticipoDTO req);
     }
 }

@@ -35,7 +35,7 @@ namespace ADDESAPI.Core.FajillaCQRS
                 }
 
 
-                Result = await _resource.GetFajillasColaborador(req.Fecha, req.NoEmpleado, req.Estacion, req.Turno);
+                Result = await _resource.GetFajillasColaborador(req.Fecha, req.NoEmpleado, req.Turno);
             }
             catch (Exception ex)
             {

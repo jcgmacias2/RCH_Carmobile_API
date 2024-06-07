@@ -35,7 +35,7 @@ namespace ADDESAPI.Core.ProducoCQRS.DTO
     public class ProductosGTDTO
     {
         public int tipoPago { get; set; }
-        public string detailsPayment { get; set; }
+        public DetailsPayment detailsPayment { get; set; }
         public List<ProductoGTDTO> products { get; set; }
     }
     public class ProductoGTDTO
@@ -43,6 +43,11 @@ namespace ADDESAPI.Core.ProducoCQRS.DTO
         public int amount { get; set; }
         public double total { get; set; }
         public ProductoApiGT product { get; set; }
+    }
+    public class DetailsPayment
+    {
+        public string? Card { get; set; } = null;
+        public string? AuthNumber { get; set; } = null;
     }
     public class ProductoApiGT
     {

@@ -9,6 +9,6 @@ namespace ADDESAPI.Core.FajillaCQRS
 {
     public interface IFajillaResource
     {
-        Task<ResultMultiple<vFajillas>> GetFajillasColaborador(string fecha, int noEmpleado, int estacion, int turno);
+        Task<ResultMultiple<vFajillas>> GetFajillasColaborador(string fecha, int noEmpleado, int turno);
     }
 }

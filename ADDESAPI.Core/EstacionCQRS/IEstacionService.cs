@@ -15,5 +15,6 @@ namespace ADDESAPI.Core.EstacionCQRS
         Task<ResultMultiple<PrecioBombaGtDTO>> GetPrecios(PrecioGtReqDTO req);
         Task<ResultSingle<vGasolinera>> GetGasolinera();
         Task<ResultSingle<TurnoActualDTO>> GetTurno();
+        Task<ResultMultiple<FormaPago>> GetFormasPago();
     }
 }

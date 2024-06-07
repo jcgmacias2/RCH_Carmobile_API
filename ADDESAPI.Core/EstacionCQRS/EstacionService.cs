@@ -228,5 +228,22 @@ namespace ADDESAPI.Core.EstacionCQRS
             }
             return Result;
         }
+        public async Task<ResultMultiple<FormaPago>> GetFormasPago()
+        {
+            ResultMultiple<FormaPago> Result = new ResultMultiple<FormaPago>();
+
+            try
+            {
+                Result = await _resource.GetFormasPago();
+
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
     }
 }

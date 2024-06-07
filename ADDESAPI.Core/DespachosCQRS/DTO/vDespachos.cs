@@ -14,9 +14,12 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public string Estacion { get; set; }
         public int Turno { get; set; }
         public int FechaCG { get; set; }
+        public int FchCor { get; set; }
         public DateTime Fecha { get; set; }
+        public DateTime FechaCorte { get; set; }
         public string Hora { get; set; }
         public int Bomba { get; set; }
+        public int IslaID { get; set; }
         public string TipoPago { get; set; }
         public int IdTipoPago { get; set; }
         public string FormaPagoSAT { get; set; }        
@@ -37,5 +40,7 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public string RazonSocial { get; set; }
         public string Direccion { get; set; }
         public string DomicilioFiscal { get; set; }
+        public int NoEmpleado { get; set; }
+        public string Vendedor { get; set; }
     }
 }

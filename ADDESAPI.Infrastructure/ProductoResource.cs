@@ -155,10 +155,10 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultSingle<TicketGT>> SetProductoTicket(string token, int bomba, string jsonProductos)
+        public async Task<ResultSingle<TicketGT>> SetProductoTicket(string token, int bomba, string jsonProductos, int noEmpleado)
         {
             ResultSingle<TicketGT> Result = new ResultSingle<TicketGT>();
-            string _api = $"{_apiAddProductosTicket}/{bomba}";
+            string _api = $"{_apiAddProductosTicket}/{bomba}?codres={noEmpleado}";
             try
             {
                 var request = new RestRequest(_api, Method.Post);
@@ -196,10 +196,10 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultSingle<TicketGT>> SetProducto(string token, int bomba, string jsonProductos)
+        public async Task<ResultSingle<TicketGT>> SetProducto(string token, int bomba, string jsonProductos, int noEmpleado)
         {
             ResultSingle<TicketGT> Result = new ResultSingle<TicketGT>();
-            string _api = $"{_apiAddProductos}/{bomba}";
+            string _api = $"{_apiAddProductos}/{bomba}?codres={noEmpleado}";
             try
             {
                 var request = new RestRequest(_api, Method.Post);

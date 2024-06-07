@@ -32,7 +32,7 @@ namespace ADDESAPI.Infrastructure
             {
                 using (var connection = new SqlConnection(_connectionString))
                 {
-                    var param = new { @Gasolinera = _gasolinera, 
+                    var param = new { @Gasolinera = _gasolinera,
                         NoEmpleado = request.NoEmpleado,
                         NoBomba = request.Bomba,
                         Tipo = request.UMedida,
@@ -40,13 +40,13 @@ namespace ADDESAPI.Infrastructure
                         Grado = request.Grado,
                         DespachoAnterior = 0,
                         TipoPago = request.TipoPago,
-                        QR = request.QrPago,
+                        QR = "",// request.QrPago,
                         RFC = request.RFC,
                         Total = request.Total,
                         Descuento = request.Descuento,
                         TotalConDescuento = request.Total - request.Descuento,
-                        QrCupon = request.QrCupon,
-                        Cupon = request.Cupon
+                        QrCupon = "",// request.QrCupon,
+                        Cupon = "",//request.Cupon
                     };
                     var affectedRows = connection.ExecuteNonQuery("EXEC [dbo].[SP_PRESET_GATEWAY] @Gasolinera, @NoEmpleado, @NoBomba, @Tipo, @Cantidad, @Grado, @DespachoAnterior, @TipoPago, @QR, @RFC, @Total, @Descuento, @TotalConDescuento, @QrCupon, @Cupon;", param);
                     if (affectedRows > 0)

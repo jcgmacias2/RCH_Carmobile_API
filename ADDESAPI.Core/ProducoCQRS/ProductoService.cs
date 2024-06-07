@@ -239,12 +239,30 @@ namespace ADDESAPI.Core.ProducoCQRS
                 }
                 else
                 {
-                    Productos.tipoPago = req.TipoPago;
+                    switch (req.TipoPago)
+                    {
+                        case 51:
+                            Productos.tipoPago = 3;
+                            break;
+                        case 52:
+                            Productos.tipoPago = 4;
+                            break;
+                        case 53:
+                            Productos.tipoPago = 7;
+                            break;
+                        case 65:
+                            Productos.tipoPago = 9;
+                            break;
+                        case 74:
+                            Productos.tipoPago = 8;
+                            break;
+                    }
+                    
                 }
 
                 string jsonString = JsonConvert.SerializeObject(Productos);
 
-                var ResultProducto = await _resource.SetProductoTicket(token, req.Bomba, jsonString);
+                var ResultProducto = await _resource.SetProductoTicket(token, req.Bomba, jsonString, req.NoEmpleado);
                 Result.Success = ResultProducto.Success;
                 Result.Error = ResultProducto.Error;
                 Result.Message = ResultProducto.Message;
@@ -302,12 +320,32 @@ namespace ADDESAPI.Core.ProducoCQRS
                 }
                 else
                 {
-                    Productos.tipoPago = req.TipoPago;
+                    switch (req.TipoPago)
+                    {
+                        case 51:
+                            Productos.tipoPago = 3;
+                            Productos.detailsPayment = new DetailsPayment { AuthNumber = "", Card = "" };
+                            break;
+                        case 52:
+                            Productos.tipoPago = 4;
+                            Productos.detailsPayment = new DetailsPayment { AuthNumber = "", Card = "" };
+                            break;
+                        case 53:
+                            Productos.tipoPago = 7;
+                            Productos.detailsPayment = new DetailsPayment { AuthNumber = "", Card = "" };
+                            break;
+                        case 65:
+                            Productos.tipoPago = 9;
+                            break;
+                        case 74:
+                            Productos.tipoPago = 8;
+                            break;
+                    }
                 }
 
                 string jsonString = JsonConvert.SerializeObject(Productos);
 
-                var ResultProducto = await _resource.SetProducto(token, req.Bomba, jsonString);
+                var ResultProducto = await _resource.SetProducto(token, req.Bomba, jsonString, req.NoEmpleado);
                 Result.Success = ResultProducto.Success;
                 Result.Error = ResultProducto.Error;
                 Result.Message = ResultProducto.Message;

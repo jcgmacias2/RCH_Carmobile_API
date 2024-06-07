@@ -13,6 +13,6 @@ namespace ADDESAPI.Core.Colaborador.DTO
     {
         public string Usuario { get; set; }
         public string Password { get; set; }
-        public string Fecha { get; set; }
+        //public string Fecha { get; set; }
     }
 }

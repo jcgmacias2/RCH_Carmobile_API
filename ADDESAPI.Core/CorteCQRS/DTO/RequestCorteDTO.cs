@@ -10,8 +10,8 @@ namespace ADDESAPI.Core.CorteCQRS.DTO
     {
         public string Fecha { get; set; }
         public int NoEmpleado { get; set; }
-        public int Estacion { get; set; }
+        //public int Estacion { get; set; }
         public int Turno { get; set; }
-        public int Bomba { get; set; }
+        //public int Bomba { get; set; }
     }
 }

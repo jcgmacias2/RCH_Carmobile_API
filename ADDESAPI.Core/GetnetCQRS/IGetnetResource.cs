@@ -8,6 +8,6 @@ namespace ADDESAPI.Core.GetnetCQRS
 {
     public interface IGetnetResource
     {
-        Task<ResultSingle<GetnetTransaccionesCorteDTO>> GetTransaccionesTurnoVendedor(string fecha, int estacion, int turno, int noEmpleado);
+        Task<ResultSingle<GetnetTransaccionesCorteDTO>> GetTransaccionesTurnoVendedor(string fecha, int turno, int noEmpleado);
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj": {}
+    "C:\\Users\\Admin\\Documents\\GitHub\\ADDES_API_APP\\ADEES_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\ADDES_API_APP\\ADEES_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\ADDES_API_APP\\ADEES_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj",
         "projectName": "ADDESAPI.Core",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\ADDES_API_APP\\ADEES_API\\ADDESAPI.Core\\ADDESAPI.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\ADDES_API_APP\\ADEES_API\\ADDESAPI.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -35,13 +35,13 @@ namespace ADDESAPI.Infrastructure
                 {
                     Result.Success = false;
                     Result.Error = "Error";
-                    Result.Message = "No se encontro asignación de bombas";
+                    Result.Message = "No se encotro asignación de bombas";
                 }
                 else
                 {
                     Result.Success = true;
                     Result.Error = "";
-                    Result.Message = "Asignación encontrada";
+                    Result.Message = "Asignacion encontrada";
                     Result.Data = req.ToList();
                 }
             }

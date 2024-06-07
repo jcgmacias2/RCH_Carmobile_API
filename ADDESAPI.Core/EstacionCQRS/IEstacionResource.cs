@@ -12,5 +12,9 @@ namespace ADDESAPI.Core.EstacionCQRS
         Task<ResultMultiple<vBombas>> GetBombas();
         Task<ResultMultiple<EstacionTanques>> GetTanques();
         Task<ResultSingle<vGasolinera>> GetGasolinera();
+        Task<Result> SetDispensarioCambios(int bomba, string usuario, int modo, string comentarios);
+        Task<ResultSingle<vEstacion>> GetEstacion();
+        Task<ResultMultiple<FormaPago>> GetFormasPago();
+        //Task<ResultSingle<FechaActualDTO>> GetFecha();
     }
 }

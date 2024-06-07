@@ -19,7 +19,7 @@ namespace ADDESAPI.Infrastructure
         private readonly string _userAddes;
         private readonly string _pwdAddes;
         private readonly string _apiGetTransaccionesGetnet;
-
+        public readonly int _estacion;
         public GetnetResource(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -27,8 +27,9 @@ namespace ADDESAPI.Infrastructure
             _userAddes = _configuration["ADDES:UsrAddes"];
             _pwdAddes = _configuration["ADDES:PwdAddes"];
             _apiGetTransaccionesGetnet = _configuration["ADDES:ApiGetTransaccionesGetnet"];
+            _estacion = int.Parse(_configuration["Settings:Estacion"]);
         }
-        public async Task<ResultSingle<GetnetTransaccionesCorteDTO>> GetTransaccionesTurnoVendedor(string fecha, int estacion, int turno, int noEmpleado)
+        public async Task<ResultSingle<GetnetTransaccionesCorteDTO>> GetTransaccionesTurnoVendedor(string fecha, int turno, int noEmpleado)
         {
             ResultSingle<GetnetTransaccionesCorteDTO> Result = new ResultSingle<GetnetTransaccionesCorteDTO>();
             try
@@ -45,7 +46,7 @@ namespace ADDESAPI.Infrastructure
                 var Data = new
                 {
                     Fecha = fecha,
-                    Estacion = estacion,
+                    Estacion = _estacion,
                     Turno = turno,
                     NoEmpleado = noEmpleado
                 };

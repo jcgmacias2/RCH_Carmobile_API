@@ -11,8 +11,8 @@ namespace ADDESAPI.Core.ProducoCQRS
     {
         Task<ResultMultiple<FamiliaGT>> GetFamilias(string token);
         Task<ResultMultiple<ProductoGT>> GetProductosFamilia(string token, int familia);
-        Task<ResultSingle<TicketGT>> SetProductoTicket(string token, int bomba, string jsonProductos);
-        Task<ResultSingle<TicketGT>> SetProducto(string token, int bomba, string jsonProductos);
+        Task<ResultSingle<TicketGT>> SetProductoTicket(string token, int bomba, string jsonProductos, int noEmpleado);
+        Task<ResultSingle<TicketGT>> SetProducto(string token, int bomba, string jsonProductos, int noEmpleado);
         Task<ResultSingle<vProductos>> GetProductoCB(string token, string codigo);
     }
 }

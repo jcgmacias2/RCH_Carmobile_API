@@ -1,6 +1,7 @@
 ﻿using ADDESAPI.Core.CorteCQRS.DTO;
 using ADDESAPI.Core.DespachosCQRS;
 using ADDESAPI.Core.FajillaCQRS;
+using ADDESAPI.Core.FajillaCQRS.DTO;
 using ADDESAPI.Core.GetnetCQRS;
 using ADDESAPI.Core.TipoCambioDTO;
 using ADDESAPI.Core.VentaCQRS;
@@ -33,6 +34,7 @@ namespace ADDESAPI.Core.CorteCQRS
         {
             ResultSingle<CorteDTO> Result = new ResultSingle<CorteDTO>();
             CorteDTO Corte = new CorteDTO();
+            List<vFajillas> Fajillas = new List<vFajillas>();
             try
             {
 
@@ -40,7 +42,7 @@ namespace ADDESAPI.Core.CorteCQRS
                 List<Validate> valuesToValidate = new List<Validate>();
                 valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Fecha", Value = req.Fecha.ToString() });
                 valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "NoEmpleado", Value = req.NoEmpleado.ToString() });
-                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Bomba", Value = req.Bomba.ToString() });
+                //valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Bomba", Value = req.Bomba.ToString() });
                 valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Turno", Value = req.Turno.ToString() });
 
                 Result ResultValidate = validator.GetValidate(valuesToValidate);
@@ -52,10 +54,9 @@ namespace ADDESAPI.Core.CorteCQRS
                     return Result;
                 }
 
-                int turno = int.Parse(req.Turno.ToString() + "1");
+                int turno = int.Parse(req.Turno.ToString().Substring(0, 1));
 
-                //var ResultVentas = await _resourceVenta.GetVentaTurno(req.Fecha, req.Turno, req.Bomba);
-                var ResultVentas = await _resourceVenta.GetVentaDespachosTurno(req.Fecha, req.Turno, req.Bomba);
+                var ResultVentas = await _resourceVenta.GetVentaDespachosTurno(req.Fecha, req.Turno, req.NoEmpleado);
                 if (!ResultVentas.Success)
                 {
                     Result.Success = ResultVentas.Success;
@@ -64,27 +65,49 @@ namespace ADDESAPI.Core.CorteCQRS
                     return Result;
                 }
 
-                Corte.CantidadCombustible = ResultVentas.Data.Where(v => v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64).Sum(v => v.Cantidad);
-                Corte.ImporteCombustible = ResultVentas.Data.Where(v => v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64).Sum(v => v.Total);
+                var Ventas = ResultVentas.Data;
+                Corte.CantidadCombustible = Ventas.Where(v => v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64).Sum(v => v.Cantidad);
+                Corte.ImporteCombustible = Ventas.Where(v => v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64).Sum(v => v.Total);
                 Corte.CantidadProductos = ResultVentas.Data.Where(v => v.IdProducto != 62 && v.IdProducto != 63 && v.IdProducto != 64 && v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69).Sum(v => v.Cantidad);
                 Corte.ImporteProductos = ResultVentas.Data.Where(v => v.IdProducto != 62 && v.IdProducto != 63 && v.IdProducto != 64 && v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69).Sum(v => v.Total);
+                Corte.ImporteMonederos = ResultVentas.Data.Where(v => v.TipoPago == 53).Sum(v => v.Total);
+                Corte.ImporteJarreos = ResultVentas.Data.Where(v => v.TipoPago == 65 || v.TipoPago == 74).Sum(v => v.Total);
                 Corte.ImporteTotal = ResultVentas.Data.Where(v => v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69).Sum(v => v.Total);
 
-                var ResultFajilla = await _resourceFajilla.GetFajillasColaborador(req.Fecha, req.NoEmpleado, req.Estacion, req.Turno);
+                var ResultFajilla = await _resourceFajilla.GetFajillasColaborador(req.Fecha, req.NoEmpleado, turno);
                 if (ResultFajilla.Success)
                 {
-                    Corte.ImporteFajillasMXN = ResultFajilla.Data.Where(f => f.Moneda == "Pesos").Sum(f => f.Monto);
-                    Corte.ImporteFajillasUSD = ResultFajilla.Data.Where(f => f.Moneda == "Dlls").Sum(f => f.Monto);
+                    Fajillas = ResultFajilla.Data.ToList();
+                    Corte.ImporteFajillasMXN = Fajillas.Where(f => f.Moneda == "Pesos").Sum(f => f.Monto);
+                    Corte.ImporteFajillasUSD = Fajillas.Where(f => f.Moneda == "Dlls").Sum(f => f.Monto);
+                }
+                Corte.Bombas = new List<CorteBombaDTO>();
+                var bombas = Ventas.Select(x => x.NoBomba).Distinct();
+
+                foreach (var bomba in bombas)
+                {
+                    var b = new CorteBombaDTO();
+                    b.Bomba = bomba;
+                    b.CantidadCombustible = Ventas.Where(v => v.NoBomba == bomba && (v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64)).Sum(v => v.Cantidad);
+                    b.ImporteCombustible = Ventas.Where(v => v.NoBomba == bomba && (v.IdProducto == 62 || v.IdProducto == 63 || v.IdProducto == 64)).Sum(v => v.Total);
+                    b.CantidadProductos = ResultVentas.Data.Where(v => v.NoBomba == bomba && (v.IdProducto != 62 && v.IdProducto != 63 && v.IdProducto != 64 && v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69)).Sum(v => v.Cantidad);
+                    b.ImporteProductos = ResultVentas.Data.Where(v => v.NoBomba == bomba && (v.IdProducto != 62 && v.IdProducto != 63 && v.IdProducto != 64 && v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69)).Sum(v => v.Total);
+                    b.ImporteTotal = ResultVentas.Data.Where(v => v.NoBomba == bomba && (v.IdProducto != 0 && v.IdProducto != 65 && v.IdProducto != 66 && v.IdProducto != 67 && v.IdProducto != 68 && v.IdProducto != 69)).Sum(v => v.Total);
+                    b.ImporteMonederos = ResultVentas.Data.Where(v => v.NoBomba == bomba && v.TipoPago == 53).Sum(v => v.Total);
+                    b.ImporteJarreos = ResultVentas.Data.Where(v => v.NoBomba == bomba && v.TipoPago == 65 || v.TipoPago == 74).Sum(v => v.Total);
+                    b.ImporteFajillasMXN = Fajillas.Where(v => v.Moneda == "Pesos" && v.Bomba == bomba && v.Estatus == 2).Sum(v => v.Monto);
+                    b.ImporteFajillasUSD = Fajillas.Where(v => v.Moneda == "Dlls" && v.Bomba == bomba && v.Estatus == 2).Sum(v => v.Monto);
+                    Corte.Bombas.Add(b);
                 }
 
                 DateTime date = DateTime.ParseExact(req.Fecha, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
-                var ResulTC = await _resourceTC.GetTipoCambio(req.Estacion, req.Fecha);
+                var ResulTC = await _resourceTC.GetTipoCambio(req.Fecha);
                 if (ResulTC.Success)
                 {
                     Corte.TipoCambio = ResulTC.Data.TC;
                 }
 
-                var ResultGetnet = await _resourceGetnet.GetTransaccionesTurnoVendedor(date.ToString("dd/MM/yyyy"), req.Estacion, turno, req.NoEmpleado);
+                var ResultGetnet = await _resourceGetnet.GetTransaccionesTurnoVendedor(date.ToString("dd/MM/yyyy"), req.Turno, req.NoEmpleado);
                 if (ResultGetnet.Success)
                 {
                     Corte.ImporteTDC = ResultGetnet.Data.Credito;

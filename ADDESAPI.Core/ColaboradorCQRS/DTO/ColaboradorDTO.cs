@@ -1,4 +1,5 @@
 ﻿using ADDESAPI.Core.Asignacion.DTO;
+using ADDESAPI.Core.ImpresoraCQRS.DTO;
 using ADDESAPI.Core.VentukCQRS.DTO;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace ADDESAPI.Core.Colaborador.DTO
         public int IdRol { get; set; }
         public List<AsignacionColaboradorTurno> Asignacion { get; set; }
         public Asistencia AsistenciaVentuk { get; set; }
+        public List<Impresoras> Impresoras { get; set; }
     }
 
 }

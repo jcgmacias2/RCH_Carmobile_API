@@ -26,6 +26,41 @@ namespace ADEES_API.WebAPI.Controllers
         {
             return await _service.Preset(request.Data);
         }
-
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Result> SetTypeBombas(GenericRequest<SetBombasTypeDTO> request)
+        {
+            return await _service.SetTypeBombas(request.Data);
+        }
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Result> SetTypeBomba(GenericRequest<SetBombaTypeDTO> request)
+        {
+            return await _service.SetTypeBomba(request.Data);
+        }
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ResultSingle<BombasTypeDTO>> GetTypeBombas()
+        {
+            return await _service.GetTypeBombas();
+        }
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<ResultMultiple<EstructuraBombaDTO>> GetEstructuraBomba(GenericRequest<GetEstructuraDTO> request)
+        {
+            return await _service.GetEstructuraBomba(request.Data);
+        }
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Result> CancelarPreset(GenericRequest<GetEstructuraDTO> request)
+        {
+            return await _service.CancelarPreset(request.Data);
+        }
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<ResultSingle<ApiGtAnticipoRes>> AddAnticipo(GenericRequest<AddAnticipoDTO> request)
+        {
+            return await _service.AddAnticipo(request.Data);
+        }
     }
 }

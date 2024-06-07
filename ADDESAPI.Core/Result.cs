@@ -47,4 +47,10 @@ namespace ADDESAPI.Core
         public string Error { get; set; }
         public T response { get; set; }
     }
+    public class ResultADDES
+    {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public string Error { get; set; }
+    }
 }

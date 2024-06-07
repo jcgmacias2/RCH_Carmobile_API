@@ -2,6 +2,8 @@
 using ADDESAPI.Core.Asignacion.DTO;
 using ADDESAPI.Core.Colaborador.DTO;
 using ADDESAPI.Core.EstacionCQRS;
+using ADDESAPI.Core.ImpresoraCQRS;
+using ADDESAPI.Core.ImpresoraCQRS.DTO;
 using ADDESAPI.Core.VentukCQRS;
 using Proteo5.HL.Validators;
 using System;
@@ -18,12 +20,14 @@ namespace ADDESAPI.Core.Colaborador
         private readonly IVentukResource _resourceVentuk;
         private readonly IAsignacionResource _resourceAsignacion;
         private readonly IEstacionResource _resourceEstacion;
-        public ColaboradorService(IColaboradorResource colaboradorResource, IVentukResource ventukResource, IAsignacionResource resourceAsignacion, IEstacionResource resourceEstacion)
+        private readonly IImpresoraResource _resourceImpresoras;
+        public ColaboradorService(IColaboradorResource colaboradorResource, IVentukResource ventukResource, IAsignacionResource resourceAsignacion, IEstacionResource resourceEstacion, IImpresoraResource resourceImpresoras)
         {
             _resource = colaboradorResource;
             _resourceVentuk = ventukResource;
             _resourceAsignacion = resourceAsignacion;
             _resourceEstacion = resourceEstacion;
+            _resourceImpresoras = resourceImpresoras;
         }
 
         public async Task<ResultSingle<ColaboradorDTO>> Login(RequestLoginDTO request)
@@ -36,7 +40,7 @@ namespace ADDESAPI.Core.Colaborador
                 List<Validate> valuesToValidate = new List<Validate>();
                 valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Usuario", Value = request.Usuario });
                 valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Password", Value = request.Password });
-                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Fecha", Value = request.Fecha });
+                //valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Fecha", Value = request.Fecha });
                 Result ResultValidate = validator.GetValidate(valuesToValidate);
                 if (!ResultValidate.Success)
                 {
@@ -85,38 +89,35 @@ namespace ADDESAPI.Core.Colaborador
 
                 
                 colaboradorDTO.Token = ResultToken.Data;
-                DateTime fechaAsignacion = DateTime.ParseExact(request.Fecha, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
+                //DateTime fechaAsignacion = DateTime.ParseExact(request.Fecha, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
 
                 if (colaboradorDTO.IdRol == 2)
                 {
-
-                    var ResultAsignacion = await _resourceAsignacion.GetAsignacion(colaboradorDTO.NumeroVentuk, fechaAsignacion);
-                    if (ResultAsignacion.Success)
+                    var ResultGasolinera = await _resourceEstacion.GetGasolinera();
+                    if (ResultGasolinera.Success)
                     {
-                        List<AsignacionColaboradorTurno> lstAsignaciones = new List<AsignacionColaboradorTurno>();
-                        AsignacionColaboradorTurno asignacion;
-                        var turnos = ResultAsignacion.Data.Select(a => new { a.Turno }).Distinct().ToList();
-                        foreach (var turno in turnos)
+                        var gasolinera = ResultGasolinera.Data;
+                        //DateTime fechaAsignacion = DateTime.ParseExact(gasolinera.Fecha, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                        var ResultAsignacion = await _resourceAsignacion.GetAsignacion(colaboradorDTO.NumeroVentuk, gasolinera.Fecha);
+                        if (ResultAsignacion.Success)
                         {
-                            asignacion = new AsignacionColaboradorTurno();
-                            asignacion.Turno = turno.Turno;
-                            asignacion.Asignacion = ResultAsignacion.Data
-                                .Where(a => a.Turno == turno.Turno)
-                                .Select(x => new AsignacionDTO { IdBomba = x.IdBomba, Bomba = x.Bomba, noIsla = x.noIsla, NoBomba = x.NoBomba })
-                                .ToList();
-                            lstAsignaciones.Add(asignacion);
+                            List<AsignacionColaboradorTurno> lstAsignaciones = new List<AsignacionColaboradorTurno>();
+                            AsignacionColaboradorTurno asignacion;
+                            var turnos = ResultAsignacion.Data.Select(a => new { a.Turno }).Distinct().ToList();
+                            foreach (var turno in turnos)
+                            {
+                                asignacion = new AsignacionColaboradorTurno();
+                                asignacion.Turno = turno.Turno;
+                                asignacion.Asignacion = ResultAsignacion.Data
+                                    .Where(a => a.Turno == turno.Turno)
+                                    .Select(x => new AsignacionDTO { IdBomba = x.IdBomba, Bomba = x.Bomba, noIsla = x.noIsla, NoBomba = x.NoBomba })
+                                    .ToList();
+                                lstAsignaciones.Add(asignacion);
+                            }
+                            colaboradorDTO.Asignacion = lstAsignaciones;
+
                         }
-                        colaboradorDTO.Asignacion = lstAsignaciones;
-
                     }
-                    else
-                    {
-                        Result.Success = false;
-                        Result.Error = ResultAsignacion.Error;
-                        Result.Message = ResultAsignacion.Message;
-                        return Result;
-                    }
-
 
                 }
                 else if (colaboradorDTO.IdRol == 3 || colaboradorDTO.IdRol == 7 || colaboradorDTO.IdRol == 15)
@@ -133,22 +134,18 @@ namespace ADDESAPI.Core.Colaborador
                     colaboradorDTO.Asignacion.Add(new AsignacionColaboradorTurno { Turno = ResultGasolinera.Data.TurnoActual });
                 }
 
-
-                //var ResultVentuk = await _resourceVentuk.GetAsistencia(colaboradorDTO.NumeroVentuk, fechaAsignacion);
-                //if (!ResultVentuk.Success)
-                //{
-                //    Result.Success = false;
-                //    Result.Error = ResultVentuk.Error;
-                //    Result.Message = ResultVentuk.Message;
-                //    return Result;
-                //}
-                //colaboradorDTO.AsistenciaVentuk = ResultVentuk.Data;
-
+                colaboradorDTO.Impresoras = new List<Impresoras>();
+                var ResultImpresoras = await _resourceImpresoras.GetImpresoras();
+                if (ResultImpresoras.Success)
+                {
+                    colaboradorDTO.Impresoras = ResultImpresoras.Data.ToList();
+                }
 
                 Result.Success = true;
                 Result.Error = "";
                 Result.Message = "Inicio de sesión exitoso";
                 Result.Data = colaboradorDTO;
+
             }
             catch (Exception ex)
             {

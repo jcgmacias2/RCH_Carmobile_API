@@ -16,8 +16,9 @@ namespace ADDESAPI.Core.EstacionCQRS.DTO
 		public string Clave { get; set; }
 		public string PermisoCRE { get; set; }
 		public string CP { get; set; }
+        public DateTime Fecha { get; set; }
 
-	}
+    }
 	public class TurnoActualDTO
 	{
         public int Turno { get; set; }

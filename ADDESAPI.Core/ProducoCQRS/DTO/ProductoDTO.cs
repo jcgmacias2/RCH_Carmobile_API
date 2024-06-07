@@ -31,6 +31,7 @@ namespace ADDESAPI.Core.ProducoCQRS.DTO
     {
         public int Bomba { get; set; }
         public int TipoPago { get; set; }
+        public int NoEmpleado { get; set; }
         public List<Producto> Productos { get; set; }
     }
 }

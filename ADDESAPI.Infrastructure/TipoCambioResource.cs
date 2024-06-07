@@ -18,19 +18,21 @@ namespace ADDESAPI.Infrastructure
         public readonly string _connectionString;
         public readonly string _connectionStringAddes;
         public readonly int _gasolinera;
+        public readonly int _estacion;
         public TipoCambioResource(IConfiguration configuration)
         {
             _configuration = configuration;
             _connectionString = _configuration["ConnectionStrings:DefaultConnection"];
             _connectionStringAddes = _configuration["ConnectionStrings:AddesConnection"];
             _gasolinera = int.Parse(_configuration["Settings:Gasolinera"]);
+            _estacion = int.Parse(_configuration["Settings:Estacion"]);
         }
-        public async Task<ResultSingle<vTipoCambio>> GetTipoCambio(int estacion, string fecha)
+        public async Task<ResultSingle<vTipoCambio>> GetTipoCambio(string fecha)
         {
             ResultSingle<vTipoCambio> Result = new ResultSingle<vTipoCambio>();
             try
             {
-                string sql = $"SELECT TOP 1 Id, Fecha, TC, Estacion FROM vTipoCambio WHERE Estacion = {estacion} AND Fecha = '{fecha}' ORDER BY Fecha DESC";
+                string sql = $"SELECT TOP 1 Id, Fecha, TC, Estacion FROM vTipoCambio WHERE Estacion = {_estacion} AND Fecha = '{fecha}' ORDER BY Fecha DESC";
                 using var connection = new SqlConnection(_connectionStringAddes);
                 var req = await connection.ExecuteQueryAsync<vTipoCambio>(sql);
 

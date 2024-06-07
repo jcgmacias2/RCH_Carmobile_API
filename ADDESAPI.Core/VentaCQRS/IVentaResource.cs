@@ -9,6 +9,6 @@ namespace ADDESAPI.Core.VentaCQRS
     public interface IVentaResource
     {
         Task<ResultMultiple<vVenta>> GetVentaTurno(string fecha, int turno, int bomba);
-        Task<ResultMultiple<vVenta>> GetVentaDespachosTurno(string fecha, int turno, int bomba);
+        Task<ResultMultiple<vVenta>> GetVentaDespachosTurno(string fecha, int turno, int noEmpleado);
     }
 }

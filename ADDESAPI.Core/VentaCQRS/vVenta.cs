@@ -18,5 +18,7 @@ namespace ADDESAPI.Core.VentaCQRS
         public string Producto { get; set; }
         public double Cantidad { get; set; }
         public double Total { get; set; }
+        public int NoEmpleado { get; set; }
+        public int TipoPago { get; set; }
     }
 }

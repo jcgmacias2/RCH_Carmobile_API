@@ -7,9 +7,12 @@ using ADDESAPI.Core.EstacionCQRS;
 using ADDESAPI.Core.FajillaCQRS;
 using ADDESAPI.Core.GetnetCQRS;
 using ADDESAPI.Core.GTCQRS;
+using ADDESAPI.Core.ImpresoraCQRS;
 using ADDESAPI.Core.ImpuestoCQRS;
 using ADDESAPI.Core.PresetCQRS;
+using ADDESAPI.Core.PreventaCQRS;
 using ADDESAPI.Core.ProducoCQRS;
+using ADDESAPI.Core.TanqueCQRS;
 using ADDESAPI.Core.TipoCambioDTO;
 using ADDESAPI.Core.VentaCQRS;
 using ADDESAPI.Core.VentukCQRS;
@@ -82,6 +85,12 @@ builder.Services.AddTransient<IFajillaService, FajillaService>();
 builder.Services.AddTransient<IFajillaResource, FajillaResource>();
 builder.Services.AddTransient<ITipoCambioResource, TipoCambioResource>();
 builder.Services.AddTransient<IGetnetResource, GetnetResource>();
+builder.Services.AddTransient<IImpresoraResource, ImpresoraResource>();
+builder.Services.AddTransient<IImpresoraService, ImpresoraService>();
+builder.Services.AddTransient<IPreventaResource, PreventaResource>();
+builder.Services.AddTransient<IPreventaService, PreventaService>();
+builder.Services.AddTransient<ITanqueResource, TanqueResource>();
+builder.Services.AddTransient<ITanqueService, TanqueService>();
 
 builder.Services.AddCors(o =>
 {

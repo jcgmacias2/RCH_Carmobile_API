@@ -9,6 +9,6 @@ namespace ADDESAPI.Core.TipoCambioDTO
 {
     public interface ITipoCambioResource
     {
-        Task<ResultSingle<vTipoCambio>> GetTipoCambio(int estacion, string fecha);
+        Task<ResultSingle<vTipoCambio>> GetTipoCambio(string fecha);
     }
 }

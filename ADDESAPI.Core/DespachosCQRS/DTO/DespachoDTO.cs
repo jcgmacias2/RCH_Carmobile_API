@@ -20,9 +20,12 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public string PermisoCre { get; set; }
         public int Turno { get; set; }
         public int FechaCG { get; set; }
+        public int FchCor { get; set; }
         public DateTime Fecha { get; set; }
+        public DateTime FechaCorte { get; set; }
         public string Hora { get; set; }
         public int Bomba { get; set; }
+        public int IslaID { get; set; }
         public double Subtotal { get; set; }
         public double IVA { get; set; }
         public double IEPS { get; set; }
@@ -34,9 +37,17 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public string UUID { get; set; }
         public string DescProductos { get; set; }
         public bool VentaApp { get; set; }
-        public int TipoPagoApp { get; set; }
-        public double Descuento { get; set; }
+        public int TipoPagoApp { get; set; }        
         public string WebID { get; set; }
+        public double Descuento { get; set; }
+        public string CardNumber { get; set; }
+        public string NombreCliente { get; set; }
+        public double Puntos { get; set; }
+        public double litrosRedimidos { get; set; }
+        public string PromoDesc { get; set; }
+        public int PromoCode { get; set; }
+        public int NoEmpleado { get; set; }
+        public string Vendedor { get; set; }
         public List<DespachoDetalleDTO> Detalle { get; set; }
     }
     public class DespachoDetalleDTO
@@ -69,7 +80,8 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public double Total { get; set; }
         public int IdTipoPago { get; set; }
         public string TipoPago { get; set; }
-        public string Despacho { get; set; }
+        public string Descripcion { get; set; }
+        public int Productos { get; set; }
         public List<DespachoDetalleAppDTO> Detalle { get; set; }
 
     }

@@ -1,4 +1,5 @@
 ﻿using ADDESAPI.Core.DespachosCQRS.DTO;
+using ADDESAPI.Core.GTCQRS;
 using ADDESAPI.Core.ImpuestoCQRS;
 using ADDESAPI.Core.ImpuestoCQRS.DTO;
 using System;
@@ -13,11 +14,12 @@ namespace ADDESAPI.Core.DespachosCQRS
     {
         private readonly IDespachosResource _resource;
         private readonly IImpuestoResource _resourceImpuesto;
-
-        public DespachosService(IDespachosResource despachosResource, IImpuestoResource resourceImpuesto)
+        private readonly IGTResource _resourceGT;
+        public DespachosService(IDespachosResource despachosResource, IImpuestoResource resourceImpuesto, IGTResource resourceGT)
         {
             _resource = despachosResource;
             _resourceImpuesto = resourceImpuesto;
+            _resourceGT = resourceGT;
         }
 
         //public async Task<ResultMultiple<DespachoDTO>> GetDespachos(RequestTransaccionesDTO request)
@@ -99,22 +101,6 @@ namespace ADDESAPI.Core.DespachosCQRS
                 }
                 var Despachos = ResultDespachos.Data;
 
-                string despachos = "";
-                foreach (var item in Despachos)
-                {
-                    despachos += $"{item.Transaccion},";
-                }
-                despachos = despachos.TrimEnd(',');
-                var ResultDetalle = await _resource.GetDespachosApp(despachos);
-                if (ResultDetalle.Success)
-                {
-                    foreach (var item in Despachos)
-                    {
-                        item.Detalle = new List<DespachoDetalleAppDTO>();
-                        item.Detalle = ResultDetalle.Data.Where(i => i.Despacho == item.Despacho && i.Total > 0).ToList();
-                        item.Total = ResultDetalle.Data.Where(i => i.Despacho == item.Despacho).Sum(i => i.Total);
-                    }
-                }
                 Despachos.ToList().ForEach(d => { d.Transaccion = $"{d.Transaccion}0"; });
                 Result.Success = true;
                 Result.Data = Despachos;
@@ -128,7 +114,7 @@ namespace ADDESAPI.Core.DespachosCQRS
             }
             return Result;
         }
-        public async Task<ResultSingle<DespachoDTO>> GetDespachoByTransacion(RequestTransaccionDTO requestDTO)
+        public async Task<ResultSingle<DespachoDTO>> GetDespachoByTransaccion(RequestTransaccionDTO req)
         {
             ResultSingle<DespachoDTO> Result = new ResultSingle<DespachoDTO>();
             DespachoDTO Despacho = new DespachoDTO();
@@ -136,7 +122,7 @@ namespace ADDESAPI.Core.DespachosCQRS
             {
                 Validator validator = new Validator();
                 List<Validate> valuesToValidate = new List<Validate>();
-                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Transaccion", Value = requestDTO.Transaccion.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Transaccion", Value = req.Transaccion.ToString() });
 
                 Result ResultValidate = validator.GetValidate(valuesToValidate);
                 if (!ResultValidate.Success)
@@ -150,7 +136,7 @@ namespace ADDESAPI.Core.DespachosCQRS
                 double subtotal = 0, iva = 0, ieps = 0;
                 double tasaIVA = 0, cuotaIEPS = 0;
 
-                int transaccion  = int.Parse(requestDTO.Transaccion.ToString().Remove(requestDTO.Transaccion.ToString().Length - 1));
+                int transaccion  = int.Parse(req.Transaccion.ToString().Remove(req.Transaccion.ToString().Length - 1));
                 
 
                 var ResultDespacho = await _resource.GetDespacho(transaccion);
@@ -165,11 +151,11 @@ namespace ADDESAPI.Core.DespachosCQRS
 
                 var d = ResultDespacho.Data;
 
-                Despacho.Transaccion = int.Parse(requestDTO.Transaccion);
+                Despacho.Transaccion = int.Parse(req.Transaccion);
                 Despacho.Gasolinera = d.Gasolinera;
                 Despacho.NoEstacion = d.NoEstacion;
                 Despacho.Estacion = d.Estacion;
-                Despacho.Ticket = $"{d.NoEstacion.ToString().PadLeft(5, '0')}{requestDTO.Transaccion}";
+                Despacho.Ticket = $"{d.NoEstacion.ToString().PadLeft(5, '0')}{req.Transaccion}";
                 Despacho.RFC = d.RFC;
                 Despacho.RazonSocial = d.RazonSocial;
                 Despacho.Direccion = d.Direccion;
@@ -177,14 +163,19 @@ namespace ADDESAPI.Core.DespachosCQRS
                 Despacho.PermisoCre = d.PermisoCRE;
                 Despacho.Turno = d.Turno;
                 Despacho.FechaCG = d.FechaCG;
+                Despacho.FchCor = d.FchCor;
                 Despacho.Fecha = d.Fecha;
+                Despacho.FechaCorte = d.FechaCorte;
                 Despacho.Hora = d.Hora;
                 Despacho.Bomba = d.Bomba;
+                Despacho.IslaID = d.IslaID;
                 Despacho.Total = d.Total;
                 Despacho.IdTipoPago = d.IdTipoPago;
                 Despacho.TipoPago = d.TipoPago;
                 Despacho.FormaPagoSAT = d.FormaPagoSAT;
                 Despacho.WebID = String.Format("{0:X}", d.Transaccion.GetHashCode());
+                Despacho.NoEmpleado = d.NoEmpleado;
+                Despacho.Vendedor = d.Vendedor;
                 Despacho.Detalle = new List<DespachoDetalleDTO>();
 
                 var ResultDetalle = await _resource.GetDespachoDetalle(transaccion);
@@ -253,20 +244,18 @@ namespace ADDESAPI.Core.DespachosCQRS
                 Despacho.TipoPagoApp = 0;
                 Despacho.VentaApp = false;
 
-                //if (Despacho.IdTipoPago == 51 || Despacho.IdTipoPago == 52)
-                //{
-                //    GenericResponseObject<PresetGATEWAY> ResultPreset = DespachoRepository.GetPresetGATEWAY(despacho);
-                //    if (ResultPreset.Success)
-                //    {
-                //        PresetGATEWAY presetGATEWAY = ResultPreset.response;
-                //        if (presetGATEWAY.QR != "")
-                //        {
-                //            Ticket.Descuento = presetGATEWAY.Descuento;
-                //            Ticket.TipoPagoApp = presetGATEWAY.TipoPago;
-                //            Ticket.VentaApp = true;
-                //        }
-                //    }
-                //}
+                var ResultDiscount = await _resourceGT.GetDiscount(req.Transaccion);
+                if (ResultDiscount.Success)
+                {
+                    var Discount = ResultDiscount.Data;
+                    Despacho.Descuento = Discount.preset_discountPerLiter;
+                    Despacho.PromoDesc = Discount.Promotion;
+                    Despacho.CardNumber = Discount.ClientApp;
+                    Despacho.Puntos = Discount.pointsApp;
+                    Despacho.litrosRedimidos = Discount.littersApp;
+                    Despacho.PromoCode = Discount.idPromotion;
+                    Despacho.NombreCliente = Discount.TaxData;
+                }
 
                 Despacho.Total = Despacho.Detalle.Sum(t => t.Total);
                 Despacho.IVA = Despacho.Detalle.Sum(t => t.IVA);
@@ -310,6 +299,166 @@ namespace ADDESAPI.Core.DespachosCQRS
             {
                 Result.Success = false;
                 Result.Error = "Excepcion";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+        public async Task<ResultSingle<RedemptionDTO>> Redemption(RedemptionReq req)
+        {
+            ResultSingle<RedemptionDTO> Result = new ResultSingle<RedemptionDTO>();
+            try
+            {
+                Validator validator = new Validator();
+                List<Validate> valuesToValidate = new List<Validate>();
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Transacción", Value = req.Transaccion.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Estación", Value = req.Estacion.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Bomba", Value = req.Bomba.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "CardNumber", Value = req.CardNumber });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "LitrosRedimir", Value = req.LitrosRedimir.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Cantidad", Value = req.Cantidad.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Total", Value = req.Total.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "NoEmpleado", Value = req.NoEmpleado.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Vendedor", Value = req.Vendedor });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Descuento", Value = req.Descuento.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Precio", Value = req.Precio.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "brandId", Value = req.BrandId });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "ProgramId", Value = req.ProgramId });
+
+                Result ResultValidate = validator.GetValidate(valuesToValidate);
+                if (!ResultValidate.Success)
+                {
+                    Result.Success = ResultValidate.Success;
+                    Result.Error = ResultValidate.Error;
+                    Result.Message = ResultValidate.Message;
+                    return Result;
+                }
+                var ResultRedemption = await _resource.Redemption(req);
+                if (!ResultRedemption.Success)
+                {
+                    Result.Success = false;
+                    Result.Error = ResultRedemption.Error;
+                    Result.Message = ResultRedemption.Message;
+                    return Result;
+                }
+                var Redemption = ResultRedemption.Data;
+                Result.Success = true;
+                Result.Error = "";
+                Result.Message = ResultValidate.Message;
+                Result.Data = Redemption;
+
+                string promotion = "";
+
+                var ResultToken = await _resourceGT.GetToken();
+                if (!ResultToken.Success)
+                {
+                    promotion = "Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo. Error al generar el login de GT";
+                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    Result.Success = false;
+                    Result.Error = "Error al egnerar el anticipo";
+                    Result.Message = "Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo";                    
+                    return Result;
+                }
+                string token = ResultToken.Data;
+
+                int codval = -269;
+                if (req.IdTipoPago == 51)
+                    codval = -267;
+                else if (req.IdTipoPago == 52)
+                    codval = -268;
+
+                var data = new { fch = req.FechaCG, nrotur = req.Turno, codisl = req.IslaId, codres = req.NoEmpleado, fchcor = req.FchCor, codval = codval, can = req.Descuento, mto = req.Descuento };
+                string jsonString = System.Text.Json.JsonSerializer.Serialize(data);
+
+                var ResultAnticipo = await _resourceGT.AddAnticipo(token, jsonString);
+                if (!ResultAnticipo.Success)
+                {
+                    promotion = $"Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo. Respuesta: {ResultAnticipo.Error}. {ResultAnticipo.Message}";
+                    
+                    Result.Success = false;
+                    Result.Error = "Error al generar el anticipo";
+                    Result.Message = $"Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo. {ResultAnticipo.Message}";
+                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                }
+                else
+                {
+                    promotion = req.PromoDesc;
+                    
+                    Result.Success = true;
+                    Result.Error = "";
+                    Result.Message = "Descuento aplicado";
+                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                }
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "Error al Redimir";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+        public async Task<ResultSingle<RedemptionDTO>> RewardRedemption(RedemptionReq req)
+        {
+            ResultSingle<RedemptionDTO> Result = new ResultSingle<RedemptionDTO>();
+            try
+            {
+                Validator validator = new Validator();
+                List<Validate> valuesToValidate = new List<Validate>();
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Transacción", Value = req.Transaccion.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Estación", Value = req.Estacion.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "Bomba", Value = req.Bomba.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "CardNumber", Value = req.CardNumber });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "LitrosRedimir", Value = req.LitrosRedimir.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Cantidad", Value = req.Cantidad.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Total", Value = req.Total.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(int), ParameterName = "NoEmpleado", Value = req.NoEmpleado.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Vendedor", Value = req.Vendedor });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Descuento", Value = req.Descuento.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(double), ParameterName = "Precio", Value = req.Precio.ToString() });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "brandId", Value = req.BrandId });
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "ProgramId", Value = req.ProgramId });
+
+                Result ResultValidate = validator.GetValidate(valuesToValidate);
+                if (!ResultValidate.Success)
+                {
+                    Result.Success = ResultValidate.Success;
+                    Result.Error = ResultValidate.Error;
+                    Result.Message = ResultValidate.Message;
+                    return Result;
+                }
+                var ResultImpuesto = await _resourceImpuesto.GetImpuestoProducto(req.Producto);
+                if (!ResultImpuesto.Success)
+                {
+                    Result.Success = ResultImpuesto.Success;
+                    Result.Error = "No se encontro el precio del producto";
+                    Result.Message = ResultImpuesto.Message;
+                    return Result;
+                }
+                var Impuesto = ResultImpuesto.Data;
+                req.Precio = Impuesto.Precio;
+                req.Descuento = Impuesto.Precio;
+
+                var ResultRedemption = await _resource.RewardRedemption(req);
+                if (!ResultRedemption.Success)
+                {
+                    Result.Success = false;
+                    Result.Error = ResultRedemption.Error;
+                    Result.Message = ResultRedemption.Message;
+                    return Result;
+                }
+                var Redemption = ResultRedemption.Data;
+                Result.Success = true;
+                Result.Error = "";
+                Result.Message = ResultValidate.Message;
+                Result.Data = Redemption;
+
+                var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, req.PromoDesc, req.Producto, req.LitrosRedimir, req.Cliente);
+
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "Error al Redimir";
                 Result.Message = ex.Message;
             }
             return Result;

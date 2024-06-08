@@ -244,17 +244,16 @@ namespace ADDESAPI.Core.DespachosCQRS
                 Despacho.TipoPagoApp = 0;
                 Despacho.VentaApp = false;
 
-                var ResultDiscount = await _resourceGT.GetDiscount(req.Transaccion);
+                var ResultDiscount = await _resourceGT.GetDescuento(req.Transaccion);
                 if (ResultDiscount.Success)
                 {
                     var Discount = ResultDiscount.Data;
-                    Despacho.Descuento = Discount.preset_discountPerLiter;
-                    Despacho.PromoDesc = Discount.Promotion;
-                    Despacho.CardNumber = Discount.ClientApp;
-                    Despacho.Puntos = Discount.pointsApp;
-                    Despacho.litrosRedimidos = Discount.littersApp;
-                    Despacho.PromoCode = Discount.idPromotion;
-                    Despacho.NombreCliente = Discount.TaxData;
+                    Despacho.Descuento = Discount.Descuento;
+                    Despacho.PromoDesc = Discount.PromoDesc;
+                    Despacho.CardNumber = Discount.CardNumber;
+                    Despacho.litrosRedimidos = Discount.litrosRedimidos;
+                    Despacho.PromoCode = Discount.PromoCode;
+                    Despacho.NombreCliente = Discount.NombreCliente;
                 }
 
                 Despacho.Total = Despacho.Detalle.Sum(t => t.Total);
@@ -352,7 +351,8 @@ namespace ADDESAPI.Core.DespachosCQRS
                 if (!ResultToken.Success)
                 {
                     promotion = "Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo. Error al generar el login de GT";
-                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    //var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    var ResultSetDiscount = await _resourceGT.SetDescuento(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente, req.NoEmpleado, req.Vendedor);
                     Result.Success = false;
                     Result.Error = "Error al egnerar el anticipo";
                     Result.Message = "Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo";                    
@@ -377,7 +377,8 @@ namespace ADDESAPI.Core.DespachosCQRS
                     Result.Success = false;
                     Result.Error = "Error al generar el anticipo";
                     Result.Message = $"Se realizo la redención de saldo pero ocurrio un error al agregar el anticipo. {ResultAnticipo.Message}";
-                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    //var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    var ResultSetDiscount = await _resourceGT.SetDescuento(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente, req.NoEmpleado, req.Vendedor);
                 }
                 else
                 {
@@ -386,7 +387,8 @@ namespace ADDESAPI.Core.DespachosCQRS
                     Result.Success = true;
                     Result.Error = "";
                     Result.Message = "Descuento aplicado";
-                    var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    //var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente);
+                    var ResultSetDiscount = await _resourceGT.SetDescuento(req.Transaccion, req.Descuento, req.CardNumber, promotion, req.Producto, req.LitrosRedimir, req.Cliente, req.NoEmpleado, req.Vendedor);
                 }
             }
             catch (Exception ex)
@@ -452,7 +454,7 @@ namespace ADDESAPI.Core.DespachosCQRS
                 Result.Message = ResultValidate.Message;
                 Result.Data = Redemption;
 
-                var ResultSetDiscount = await _resourceGT.SetDiscount(req.Transaccion, req.Descuento, req.CardNumber, req.PromoDesc, req.Producto, req.LitrosRedimir, req.Cliente);
+                var ResultSetDiscount = await _resourceGT.SetDescuento(req.Transaccion, req.Descuento, req.CardNumber, req.PromoDesc, req.Producto, req.LitrosRedimir, req.Cliente, req.NoEmpleado, req.Vendedor);
 
             }
             catch (Exception ex)

@@ -22,6 +22,7 @@ namespace ADDESAPI.Infrastructure
         public readonly string _connectionString;
         public readonly string _connectionStringCG;
         public readonly int _gasolinera;
+        public readonly int _estacion;
         public readonly string _urlADDES;
         public readonly string _apiRedemption;
         public readonly string _apiRewardRedemption;
@@ -34,6 +35,7 @@ namespace ADDESAPI.Infrastructure
             _connectionString = _configuration["ConnectionStrings:DefaultConnection"];
             _connectionStringCG = _configuration["ConnectionStrings:CGConnection"];
             _gasolinera = int.Parse(_configuration["Settings:Gasolinera"]);
+            _estacion = int.Parse(_configuration["Settings:Estacion"]);
             _urlADDES = _configuration["ADDES:URL"];
             _apiRedemption = _configuration["ADDES:ApiRedemption"];
             _apiRewardRedemption = _configuration["ADDES:ApiRewardRedemption"];
@@ -396,5 +398,6 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
+       
     }
 }

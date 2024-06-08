@@ -641,27 +641,94 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<Result> SetDiscount(int transaccion, double discount, string cardNumber, string promotion, int idPromotion, double littersApp, string clientName)
+        //public async Task<Result> SetDiscount(int transaccion, double discount, string cardNumber, string promotion, int idPromotion, double littersApp, string clientName)
+        //{
+        //    Result Result = new Result();
+        //    try
+        //    {
+        //        using (var connection = new SqlConnection(_connectionStringCG))
+        //        {
+        //            promotion = promotion.Replace("'", "");
+        //            string sql = $"UPDATE HTI_Tasks SET Promotion = '{promotion}', ClientApp = '{cardNumber}', preset_discountPerLiter = {discount}, idPromotion = {idPromotion}, littersApp = {littersApp}, TaxData = '{clientName}' WHERE nrotrn = {transaccion}";
+        //            var affectedRecords = connection.ExecuteNonQuery(sql);
+        //            if (affectedRecords == 0)
+        //            {
+        //                Result.Success = false;
+        //                Result.Error = "";
+        //                Result.Message = "No se actualizo el despacho";
+        //            }
+        //            else
+        //            {
+        //                Result.Success = true;
+        //                Result.Error = "";
+        //                Result.Message = "Despacho actualizado";
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Result.Success = false;
+        //        Result.Error = "";
+        //        Result.Message = ex.Message;
+        //    }
+        //    return Result;
+        //}
+        //public async Task<ResultSingle<DiscountDTO>> GetDiscount(string transaccion)
+        //{
+        //    ResultSingle<DiscountDTO> Result = new ResultSingle<DiscountDTO>();
+        //    try
+        //    {
+        //        string sql = $"SELECT idPromotion, ISNULL(Promotion, '') 'Promotion', ISNULL(ClientApp, '') 'ClientApp', preset_discountPerLiter, pointsApp, littersApp, ISNULL(TaxData, '') 'TaxData' FROM HTI_Tasks WHERE nrotrn ={transaccion}";
+
+        //        using var connection = new SqlConnection(_connectionStringCG);
+        //        var req = await connection.ExecuteQueryAsync<DiscountDTO>(sql);
+
+        //        if (req == null || req.Count() == 0)
+        //        {
+        //            Result.Success = false;
+        //            Result.Error = "";
+        //            Result.Message = "No se encontraron registros";
+        //        }
+        //        else
+        //        {
+        //            Result.Success = true;
+        //            Result.Error = "";
+        //            Result.Message = "Registro encontrado";
+        //            Result.Data = req.FirstOrDefault();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Result.Success = false;
+        //        Result.Error = "";
+        //        Result.Message = ex.Message;
+        //    }
+        //    return Result;
+        //}
+        public async Task<Result> SetDescuento(int transaccion, double descuento, string cardNumber, string PromoDesc, int promoCode, double litrosRedimidos, string nombreCliente, int noEmpleado, string vendedor)
         {
             Result Result = new Result();
             try
             {
                 using (var connection = new SqlConnection(_connectionStringCG))
                 {
-                    promotion = promotion.Replace("'", "");
-                    string sql = $"UPDATE HTI_Tasks SET Promotion = '{promotion}', ClientApp = '{cardNumber}', preset_discountPerLiter = {discount}, idPromotion = {idPromotion}, littersApp = {littersApp}, TaxData = '{clientName}' WHERE nrotrn = {transaccion}";
-                    var affectedRecords = connection.ExecuteNonQuery(sql);
+                    PromoDesc = PromoDesc.Replace("'", "");
+                    string sql = @"INSERT INTO HTI_Descuentos(Estacion,  Gasolinera,  Transaccion,  Descuento,  CardNumber,  NombreCliente,  litrosRedimidos,  PromoDesc,  PromoCode,  NoEmpleado,  Vendedor)
+                                    VALUES          	(@Estacion, @Gasolinera, @Transaccion, @Descuento, @CardNumber, @NombreCliente, @litrosRedimidos, @PromoDesc, @PromoCode, @NoEmpleado, @Vendedor)";
+
+                    var parameters = new { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = transaccion, Descuento = descuento, CardNumber = cardNumber, NombreCliente = nombreCliente, litrosRedimidos = litrosRedimidos, PromoDesc, PromoCode = promoCode, NoEmpleado = noEmpleado, Vendedor = vendedor };
+                    var affectedRecords = connection.ExecuteNonQuery(sql, parameters);
                     if (affectedRecords == 0)
                     {
                         Result.Success = false;
                         Result.Error = "";
-                        Result.Message = "No se actualizo el despacho";
+                        Result.Message = "No se inserto el registro";
                     }
                     else
                     {
                         Result.Success = true;
                         Result.Error = "";
-                        Result.Message = "Despacho actualizado";
+                        Result.Message = "Registro agregado";
                     }
                 }
             }
@@ -673,15 +740,15 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultSingle<DiscountDTO>> GetDiscount(string transaccion)
+        public async Task<ResultSingle<DescuentoDTO>> GetDescuento(string transaccion)
         {
-            ResultSingle<DiscountDTO> Result = new ResultSingle<DiscountDTO>();
+            ResultSingle<DescuentoDTO> Result = new ResultSingle<DescuentoDTO>();
             try
             {
-                string sql = $"SELECT idPromotion, ISNULL(Promotion, '') 'Promotion', ISNULL(ClientApp, '') 'ClientApp', preset_discountPerLiter, pointsApp, littersApp, ISNULL(TaxData, '') 'TaxData' FROM HTI_Tasks WHERE nrotrn ={transaccion}";
+                string sql = $"SELECT * FROM HTI_Descuentos WHERE Estacion = {_estacion} AND Transaccion = {transaccion}";
 
                 using var connection = new SqlConnection(_connectionStringCG);
-                var req = await connection.ExecuteQueryAsync<DiscountDTO>(sql);
+                var req = await connection.ExecuteQueryAsync<DescuentoDTO>(sql);
 
                 if (req == null || req.Count() == 0)
                 {

@@ -12,5 +12,6 @@ namespace ADDESAPI.Core.DespachosCQRS
         //Task<ResultMultiple<DespachoDetalleAppDTO>> GetDespachosApp(string despachos);
         Task<ResultSingle<RedemptionDTO>> Redemption(RedemptionReq req);
         Task<ResultSingle<RedemptionDTO>> RewardRedemption(RedemptionReq req);
+        
     }
 }

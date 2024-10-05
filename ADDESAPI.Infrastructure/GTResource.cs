@@ -183,7 +183,7 @@ namespace ADDESAPI.Infrastructure
                     clientApp.jarreoApp = new PresetJarreoAppGTDTO();
                     clientApp.USD = new PresetDolaresAppGTDTO();
                     clientApp.acumular = new PresetAcumularAppGTDTO();
-                    clientApp.redimir = new PresetRedimirAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, Bomba = preset.Bomba, CardNumber = preset.CardNumber, LitrosRedimir = preset.LitrosRedimir, Descuento = preset.Descuento, Precio = 0, Cantidad = 0, Total = 0, NoEmpleado = preset.NoEmpleado, Vendedor = preset.Nombre, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Usuario = "Preset", Cliente = preset.Cliente, PromoDesc = preset.PromoDesc };
+                    clientApp.redimir = new PresetRedimirAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, Bomba = preset.Bomba, CardNumber = preset.CardNumber, LitrosRedimir = preset.LitrosRedimir, Descuento = preset.Descuento, Precio = 0, Cantidad = 0, Total = 0, NoEmpleado = preset.NoEmpleado, Vendedor = preset.Nombre, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Usuario = "Preset", Cliente = preset.Cliente, PromoDesc = preset.PromoDesc, Empresa = preset.Empresa };
                 }
                 else if (preset.TipoPago == 65)
                 {
@@ -216,7 +216,7 @@ namespace ADDESAPI.Infrastructure
                     clientApp.Tipo = 4;
                     clientApp.jarreoApp = new PresetJarreoAppGTDTO();
                     clientApp.USD = new PresetDolaresAppGTDTO();
-                    clientApp.acumular = new PresetAcumularAppGTDTO { Transaccion = 0, Estacion = _estacion, Gasolinera = _gasolinera, Fecha = "", Bomba = preset.Bomba, Total = 0, IdTipoPago = preset.TipoPago, CardNumber = preset.CardNumber, NoEmpleado = preset.NoEmpleado, Vendedor = preset.Nombre, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Usuario = "Preset" };
+                    clientApp.acumular = new PresetAcumularAppGTDTO { Transaccion = 0, Estacion = _estacion, Gasolinera = _gasolinera, Fecha = "", Bomba = preset.Bomba, Total = 0, IdTipoPago = preset.TipoPago, CardNumber = preset.CardNumber, NoEmpleado = preset.NoEmpleado, Vendedor = preset.Nombre, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Usuario = "Preset", Empresa = preset.Empresa };
                     clientApp.redimir = new PresetRedimirAppGTDTO();
                 }
                 else if (preset.TipoPago == 0 && preset.Moneda == "USD" && preset.Descuento > 0)

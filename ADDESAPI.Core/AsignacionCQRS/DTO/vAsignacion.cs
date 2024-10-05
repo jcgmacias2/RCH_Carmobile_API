@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ADDESAPI.Core.Colaborador.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,5 +32,20 @@ namespace ADDESAPI.Core.Asignacion.DTO
         public string Bomba { get; set; }
         public int noIsla { get; set; }
         public int NoBomba { get; set; }
+    }
+    public class AsignacionColaboradorDTO
+    {
+        public int IdBomba { get; set; }
+        public int Isla { get; set; }
+        public int NoBomba { get; set; }
+        public int NoEmpleado { get; set; }
+        public string Fecha { get; set; }
+        public int Turno { get; set; }
+        public int Estacion { get; set; }
+    }
+    public class AsignacionesDTO
+    {
+        public List<ColaboradoresDTO> Colaboradores { get; set; }
+        public List<AsignacionColaboradorDTO> Asignaciones { get; set; }
     }
 }

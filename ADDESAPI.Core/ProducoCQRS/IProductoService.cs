@@ -14,5 +14,6 @@ namespace ADDESAPI.Core.ProducoCQRS
         Task<Result> SetProductoTicket(ProductoRequestDTO req);
         Task<ResultSingle<int>> SetProducto(ProductoRequestDTO req);
         Task<ResultSingle<ProductoDTO>> GetProductoCB(ProductoCodigoReqDTO req);
+        Task<ResultMultiple<ProductoDTO>> Buscar(FindProductReq req);
     }
 }

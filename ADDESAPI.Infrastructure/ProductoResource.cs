@@ -123,7 +123,7 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultSingle<vProductos>> GetProductoCB(string token, string codigo)
+        public async Task<ResultSingle<vProductos>> GetProductoCB(string codigo)
         {
             ResultSingle<vProductos> Result = new ResultSingle<vProductos>();
 
@@ -234,6 +234,42 @@ namespace ADDESAPI.Infrastructure
                 Result.Success = false;
                 Result.Error = "Error";
                 Result.Message = $"Error al obtener los productos {_api} Excepcion: {ex.Message}";
+            }
+            return Result;
+        }
+
+        public async Task<ResultMultiple<vProductos>> Buscar(string nombre)
+        {
+            ResultMultiple<vProductos> Result = new ResultMultiple<vProductos>();
+
+            try
+            {
+
+                string sql = $"SELECT * FROM vProductos WHERE Descripcion LIKE '%{nombre}%' AND Habilitado = 1";
+
+                using var connection = new SqlConnection(_connectionString);
+                var req = await connection.ExecuteQueryAsync<vProductos>(sql);
+
+                if (req == null || req.Count() == 0)
+                {
+                    Result.Success = false;
+                    Result.Error = "";
+                    Result.Message = "No se encontraron productos";
+                }
+                else
+                {
+                    Result.Success = true;
+                    Result.Error = "";
+                    Result.Message = "Productos encontrados";
+                    Result.Data = req.ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "Error";
+                Result.Message = $"Error al obtener el producto Excepcion: {ex.Message}";
             }
             return Result;
         }

@@ -40,7 +40,11 @@ namespace ADDESAPI.Core.EstacionCQRS
                 var tanques = ResultTanques.Data;
                 foreach (var tanque in tanques)
                 {
-                    Combustibles.Add(new EstacionCombustiblesDTO { CodigoProducto = tanque.CodigoProducto, Producto = tanque.Producto, GradoProducto = tanque.GradoProducto });
+                    if (!Combustibles.Any(i => i.CodigoProducto == tanque.CodigoProducto))
+                    {
+                        Combustibles.Add(new EstacionCombustiblesDTO { CodigoProducto = tanque.CodigoProducto, Producto = tanque.Producto, GradoProducto = tanque.GradoProducto });
+                    }
+                    
                 }
 
                 Result.Success = true;

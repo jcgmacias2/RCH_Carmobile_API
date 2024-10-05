@@ -9,6 +9,6 @@ namespace ADDESAPI.Core.Colaborador
 {
     public interface IColaboradorService
     {
-        Task<ResultSingle<ColaboradorDTO>> Login(RequestLoginDTO request);
+        Task<ResultSingle<ColaboradorDTO>> Login(RequestLoginDTO request);        
     }
 }

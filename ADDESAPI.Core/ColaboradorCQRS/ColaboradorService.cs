@@ -4,6 +4,7 @@ using ADDESAPI.Core.Colaborador.DTO;
 using ADDESAPI.Core.EstacionCQRS;
 using ADDESAPI.Core.ImpresoraCQRS;
 using ADDESAPI.Core.ImpresoraCQRS.DTO;
+using ADDESAPI.Core.ModuloCQRS;
 using ADDESAPI.Core.VentukCQRS;
 using Proteo5.HL.Validators;
 using System;
@@ -21,13 +22,15 @@ namespace ADDESAPI.Core.Colaborador
         private readonly IAsignacionResource _resourceAsignacion;
         private readonly IEstacionResource _resourceEstacion;
         private readonly IImpresoraResource _resourceImpresoras;
-        public ColaboradorService(IColaboradorResource colaboradorResource, IVentukResource ventukResource, IAsignacionResource resourceAsignacion, IEstacionResource resourceEstacion, IImpresoraResource resourceImpresoras)
+        private readonly IModuloResource _resourceModulo;
+        public ColaboradorService(IColaboradorResource colaboradorResource, IVentukResource ventukResource, IAsignacionResource resourceAsignacion, IEstacionResource resourceEstacion, IImpresoraResource resourceImpresoras, IModuloResource resourceModulo)
         {
             _resource = colaboradorResource;
             _resourceVentuk = ventukResource;
             _resourceAsignacion = resourceAsignacion;
             _resourceEstacion = resourceEstacion;
             _resourceImpresoras = resourceImpresoras;
+            _resourceModulo = resourceModulo;
         }
 
         public async Task<ResultSingle<ColaboradorDTO>> Login(RequestLoginDTO request)
@@ -91,13 +94,15 @@ namespace ADDESAPI.Core.Colaborador
                 colaboradorDTO.Token = ResultToken.Data;
                 //DateTime fechaAsignacion = DateTime.ParseExact(request.Fecha, "yyyyMMdd", System.Globalization.CultureInfo.InvariantCulture);
 
-                if (colaboradorDTO.IdRol == 2)
+                if (colaboradorDTO.IdRol == 2 || colaboradorDTO.IdRol == 3 || colaboradorDTO.IdRol == 7)
                 {
                     var ResultGasolinera = await _resourceEstacion.GetGasolinera();
                     if (ResultGasolinera.Success)
                     {
                         var gasolinera = ResultGasolinera.Data;
-                        //DateTime fechaAsignacion = DateTime.ParseExact(gasolinera.Fecha, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                        colaboradorDTO.FechaCorte = gasolinera.Fecha;
+                        colaboradorDTO.Turno = gasolinera.TurnoActual;
+
                         var ResultAsignacion = await _resourceAsignacion.GetAsignacion(colaboradorDTO.NumeroVentuk, gasolinera.Fecha);
                         if (ResultAsignacion.Success)
                         {
@@ -117,12 +122,22 @@ namespace ADDESAPI.Core.Colaborador
                             colaboradorDTO.Asignacion = lstAsignaciones;
 
                         }
+                        //else if (colaboradorDTO.IdRol == 2)
+                        //{
+
+                        //}
+                        else
+                        {
+                            colaboradorDTO.Asignacion = new List<AsignacionColaboradorTurno>();
+                            colaboradorDTO.Asignacion.Add(new AsignacionColaboradorTurno { Turno = ResultGasolinera.Data.TurnoActual });
+                        }
                     }
 
                 }
-                else if (colaboradorDTO.IdRol == 3 || colaboradorDTO.IdRol == 7 || colaboradorDTO.IdRol == 15)
+                else if (colaboradorDTO.IdRol == 15)
                 {
                     var ResultGasolinera = await _resourceEstacion.GetGasolinera();
+                    
                     if (!ResultGasolinera.Success)
                     {
                         Result.Success = false;
@@ -130,8 +145,27 @@ namespace ADDESAPI.Core.Colaborador
                         Result.Message = ResultGasolinera.Message;
                         return Result;
                     }
+                    
+                    var gasolinera = ResultGasolinera.Data;
+                    colaboradorDTO.FechaCorte = gasolinera.Fecha;
+                    colaboradorDTO.Turno = gasolinera.TurnoActual;
+
                     colaboradorDTO.Asignacion = new List<AsignacionColaboradorTurno>();
                     colaboradorDTO.Asignacion.Add(new AsignacionColaboradorTurno { Turno = ResultGasolinera.Data.TurnoActual });
+                    //if (colaboradorDTO.IdRol == 15)
+                    //{
+                        var ResultEstacion = await _resourceEstacion.GetEstacion();
+                        if (!ResultEstacion.Success)
+                        {
+                            Result.Success = false;
+                            Result.Error = ResultEstacion.Error;
+                            Result.Message = ResultEstacion.Message;
+                            return Result;
+                        }
+                        var Estacion = ResultEstacion.Data;
+                        colaboradorDTO.NoEstacion = Estacion.NoEstacion;
+                        colaboradorDTO.Estacion = Estacion.Estacion;
+                    //}
                 }
 
                 colaboradorDTO.Impresoras = new List<Impresoras>();
@@ -139,6 +173,23 @@ namespace ADDESAPI.Core.Colaborador
                 if (ResultImpresoras.Success)
                 {
                     colaboradorDTO.Impresoras = ResultImpresoras.Data.ToList();
+                }
+
+                colaboradorDTO.Configuracion = new ConfiguracionAppDTO();
+                colaboradorDTO.Configuracion.Modulos = new List<ModuloCQRS.DTO.ModuloDTO>();
+
+                var ResultLicencia = await _resourceEstacion.GetLicenciaGetnet();
+                if (ResultLicencia.Success)
+                {
+                    colaboradorDTO.Configuracion.LicenciaTerminal = ResultLicencia.Data;
+                }
+
+                
+                var ResultModulos = await _resourceModulo.GetModulos();
+                if (ResultModulos.Success)
+                {
+                    var Modulos = ResultModulos.Data.ToList();
+                    colaboradorDTO.Configuracion.Modulos = Modulos;
                 }
 
                 Result.Success = true;

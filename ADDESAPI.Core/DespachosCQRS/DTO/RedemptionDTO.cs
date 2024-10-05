@@ -39,5 +39,6 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public int Producto { get; set; }
         public string Cliente { get; set; }
         public string PromoDesc { get; set; }
+        public string? Empresa { get; set; }
     }
 }

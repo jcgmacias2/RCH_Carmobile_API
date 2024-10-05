@@ -1,4 +1,5 @@
 using ADDESAPI.Core.Asignacion;
+using ADDESAPI.Core.AsignacionCQRS;
 using ADDESAPI.Core.BambuCQRS;
 using ADDESAPI.Core.Colaborador;
 using ADDESAPI.Core.CorteCQRS;
@@ -9,6 +10,7 @@ using ADDESAPI.Core.GetnetCQRS;
 using ADDESAPI.Core.GTCQRS;
 using ADDESAPI.Core.ImpresoraCQRS;
 using ADDESAPI.Core.ImpuestoCQRS;
+using ADDESAPI.Core.ModuloCQRS;
 using ADDESAPI.Core.PresetCQRS;
 using ADDESAPI.Core.PreventaCQRS;
 using ADDESAPI.Core.ProducoCQRS;
@@ -68,6 +70,7 @@ builder.Services.AddTransient<IColaboradorResource, ColaboradorResource>();
 builder.Services.AddTransient<IColaboradorService, ColaboradorService>();
 builder.Services.AddTransient<IVentukResource, VentukResource>();
 builder.Services.AddTransient<IAsignacionResource, AsignacionResource>();
+builder.Services.AddTransient<IAsignacionService, AsignacionService>();
 builder.Services.AddTransient<IImpuestoResource, ImpuestoResource>();
 builder.Services.AddTransient<IBambuResource, BambuResource>();
 builder.Services.AddTransient <IBambuService, BambuService>();
@@ -91,6 +94,7 @@ builder.Services.AddTransient<IPreventaResource, PreventaResource>();
 builder.Services.AddTransient<IPreventaService, PreventaService>();
 builder.Services.AddTransient<ITanqueResource, TanqueResource>();
 builder.Services.AddTransient<ITanqueService, TanqueService>();
+builder.Services.AddTransient<IModuloResource, ModuloResource>();
 
 builder.Services.AddCors(o =>
 {
@@ -104,7 +108,7 @@ builder.Services.AddCors(o =>
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.0.0" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.1.4" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

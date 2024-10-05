@@ -49,5 +49,11 @@ namespace ADEES_API.WebAPI.Controllers
         {
             return await _service.SetProducto(req);
         }
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<ResultMultiple<ProductoDTO>> Buscar(FindProductReq req)
+        {
+            return await _service.Buscar(req);
+        }
     }
 }

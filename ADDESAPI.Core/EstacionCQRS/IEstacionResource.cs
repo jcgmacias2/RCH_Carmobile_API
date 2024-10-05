@@ -15,6 +15,6 @@ namespace ADDESAPI.Core.EstacionCQRS
         Task<Result> SetDispensarioCambios(int bomba, string usuario, int modo, string comentarios);
         Task<ResultSingle<vEstacion>> GetEstacion();
         Task<ResultMultiple<FormaPago>> GetFormasPago();
-        //Task<ResultSingle<FechaActualDTO>> GetFecha();
+        Task<ResultSingle<string>> GetLicenciaGetnet();
     }
 }

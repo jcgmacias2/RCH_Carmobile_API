@@ -14,6 +14,10 @@ namespace ADDESAPI.Core.ProducoCQRS.DTO
     {
         public string Codigo { get; set; }
     }
+    public class FindProductReq
+    {
+        public string Nombre { get; set; }
+    }
     public class ProductoDTO
     {
         public int Codigo { get; set; }

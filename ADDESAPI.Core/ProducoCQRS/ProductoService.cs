@@ -142,17 +142,17 @@ namespace ADDESAPI.Core.ProducoCQRS
                     return Result;
                 }
 
-                var ResultToken = await _resourceGT.GetToken();
-                if (!ResultToken.Success)
-                {
-                    Result.Success = ResultToken.Success;
-                    Result.Error = ResultToken.Error;
-                    Result.Message = ResultToken.Message;
-                    return Result;
-                }
-                string token = ResultToken.Data;
+                //var ResultToken = await _resourceGT.GetToken();
+                //if (!ResultToken.Success)
+                //{
+                //    Result.Success = ResultToken.Success;
+                //    Result.Error = ResultToken.Error;
+                //    Result.Message = ResultToken.Message;
+                //    return Result;
+                //}
+                //string token = ResultToken.Data;
 
-                var ResultProductos = await _resource.GetProductoCB(token, req.Codigo);
+                var ResultProductos = await _resource.GetProductoCB(req.Codigo);
                 if (!ResultProductos.Success)
                 {
                     Result.Success = false;
@@ -354,6 +354,90 @@ namespace ADDESAPI.Core.ProducoCQRS
                     Result.Data = ResultProducto.Data.folio;
                 }
                 
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+        public async Task<ResultMultiple<ProductoDTO>> Buscar(FindProductReq req)
+        {
+            ResultMultiple<ProductoDTO> Result = new ResultMultiple<ProductoDTO>();
+            try
+            {
+                Validator validator = new Validator();
+                List<Validate> valuesToValidate = new List<Validate>();
+                valuesToValidate.Add(new Validate { DataType = typeof(string), ParameterName = "Nombre", Value = req.Nombre });
+
+                Result ResultValidate = validator.GetValidate(valuesToValidate);
+                if (!ResultValidate.Success)
+                {
+                    Result.Success = ResultValidate.Success;
+                    Result.Error = ResultValidate.Error;
+                    Result.Message = ResultValidate.Message;
+                    return Result;
+                }
+
+
+
+                var ResultProductos = await _resource.Buscar(req.Nombre);
+                if (!ResultProductos.Success)
+                {
+                    Result.Success = false;
+                    Result.Error = ResultProductos.Error;
+                    Result.Message = ResultProductos.Message;
+                    return Result;
+                }
+                var productos = ResultProductos.Data;
+
+                Result.Success = true;
+                Result.Error = "";
+                Result.Message = "";
+                Result.Data = new List<ProductoDTO>();
+
+                double precio = 0, iva = 0, ieps = 0;
+                ProductoDTO productoDTO;
+                foreach (var item in productos)
+                {
+                    productoDTO = new ProductoDTO();
+                    productoDTO.Codigo = item.Codigo;
+                    productoDTO.Descripcion = item.Descripcion;
+                    productoDTO.Unidad = item.Unidad;
+                    productoDTO.CodigoExterno = item.CodigoExterno;
+                    productoDTO.Habilitado = item.Habilitado;
+                    productoDTO.IdFamilia = item.IdFamilia;
+                    precio = 0;
+                    iva = 0;
+                    ieps = 0;
+                    var ResultImpuesto = await _resourceImpuesto.GetImpuestoProducto(item.Codigo);
+                    if (ResultImpuesto.Success)
+                    {
+                        precio = ResultImpuesto.Data.Precio;
+                        iva = ResultImpuesto.Data.TasaIVA;
+                        ieps = ResultImpuesto.Data.CuotaIEPS;
+                    }
+                    productoDTO.Precio = precio;
+                    productoDTO.TasaIVA = iva;
+                    productoDTO.CuotaIEPS = ieps;
+
+                    Result.Data.Add(productoDTO);
+                }
+
+                //Result.Data =  productos.Select(i => new ProductoDTO { 
+                //    Codigo = i.Codigo, 
+                //    Descripcion = i.Descripcion, 
+                //    Unidad = i.Unidad, 
+                //    CodigoExterno = i.CodigoExterno,
+                //    Habilitado = i.Habilitado,
+                //    IdFamilia = i.IdFamilia,
+                //    Precio = 0,
+                //    TasaIVA = 0
+
+                //}).ToList();
+
             }
             catch (Exception ex)
             {

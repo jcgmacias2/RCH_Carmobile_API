@@ -33,6 +33,7 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public string ProgramId { get; set; }
         public string Cliente { get; set; }
         public string PromoDesc { get; set; }
+        public string? Empresa { get; set; }
     }
     public class PresetGTDTO
     {
@@ -138,6 +139,7 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public string ProgramId { get; set; }
         public string BrandId { get; set; }
         public string Usuario { get; set; }
+        public string Empresa { get; set; }
         public List<PresetDolaresDetAppGTDTO> Detalle { get; set; }
     }
     public class PresetAcumularDetAppGTDTO
@@ -169,5 +171,6 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public int idPromotion { get; set; }
         public string Cliente { get; set; }
         public string PromoDesc { get; set; }
+        public string Empresa { get; set; }
     }
 }

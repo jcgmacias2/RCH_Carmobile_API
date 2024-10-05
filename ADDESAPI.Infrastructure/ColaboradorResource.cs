@@ -23,6 +23,8 @@ namespace ADDESAPI.Infrastructure
         public readonly string _audienceToken;
         public readonly string _issuerToken;
         public readonly string _expireTime;
+        public readonly int _gasolinera;
+        public readonly int _estacion;        
 
         public ColaboradorResource(IConfiguration configuration)
         {
@@ -32,6 +34,8 @@ namespace ADDESAPI.Infrastructure
             _audienceToken = _configuration["Token:JWT_AUDIENCE_TOKEN"];
             _issuerToken = _configuration["Token:JWT_ISSUER_TOKEN"];
             _expireTime = _configuration["Token:JWT_EXPIRE_MINUTES"];
+            _gasolinera = int.Parse(_configuration["Settings:Gasolinera"]);
+            _estacion = int.Parse(_configuration["Settings:Estacion"]);
         }
         public async Task<ResultSingle<vColaborador>> Login(string usuario, string password)
         {
@@ -102,6 +106,39 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        
+
+        public async Task<ResultMultiple<ColaboradoresDTO>> GetColaboradores()
+        {
+            ResultMultiple<ColaboradoresDTO> Result = new ResultMultiple<ColaboradoresDTO>();
+            try
+            {
+                string sql = $"SELECT * FROM vColaborador WHERE NoEstacion = {_estacion}";
+
+                using var connection = new SqlConnection(_connectionString);
+                var req = await connection.ExecuteQueryAsync<ColaboradoresDTO>(sql);
+
+                if (req == null || req.Count() == 0)
+                {
+                    Result.Success = false;
+                    Result.Error = "";
+                    Result.Message = "No se encontraron registros";
+                }
+                else
+                {
+                    Result.Success = true;
+                    Result.Error = "";
+                    Result.Message = "Registros encontrados";
+                    Result.Data = req.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+       
     }
 }

@@ -178,6 +178,15 @@ namespace ADDESAPI.Core.GTCQRS
                 var dataStatus = ResultStatus.Data;
                 var responseStatus = dataStatus.response.Split('|');
                 string info = responseStatus[0];
+
+                info = info.Replace("\0", "");
+                if (info.ToLower().Contains("transacción inválida") || info.ToLower().Contains("transaccion invalida"))
+                {
+                    Result.Success = false;
+                    Result.Message = info;
+                    Result.Error = "Error al obtener el Estatus de la bomba";
+                    return Result;
+                }
                 string status = responseStatus[1];
 
                 switch (status)

@@ -210,7 +210,9 @@ namespace ADDESAPI.Infrastructure
             try
             {
                 using var connection = new SqlConnection(_connectionString);
-                var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
+                //var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
+                string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
+                var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
 
                 if (req == null || req.Count() == 0)
                 {
@@ -240,7 +242,9 @@ namespace ADDESAPI.Infrastructure
             try
             {
                 using var connection = new SqlConnection(_connectionString);
-                var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
+                //var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
+                string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
+                var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
 
                 if (req == null || req.Count() == 0)
                 {

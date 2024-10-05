@@ -25,6 +25,7 @@ namespace ADDESAPI.Infrastructure
         public readonly string _urlAddes;
         private readonly string _userAddes;
         private readonly string _pwdAddes;
+        public readonly string _licenciaGetnet;
 
         public EstacionResource(IConfiguration configuration)
         {
@@ -36,6 +37,7 @@ namespace ADDESAPI.Infrastructure
             _userAddes = _configuration["ADDES:UsrAddes"];
             _pwdAddes = _configuration["ADDES:PwdAddes"];
             _apiSetDispensarioCambio = _configuration["ADDES:ApiSetDispensarioCambio"];
+            _licenciaGetnet = _configuration["Settings:LicenciaGetnet"];
         }
         public async Task<ResultMultiple<vBombas>> GetBombas()
         {
@@ -244,6 +246,27 @@ namespace ADDESAPI.Infrastructure
             {
                 Result.Success = false;
                 Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+        public async Task<ResultSingle<string>> GetLicenciaGetnet()
+        {
+            ResultSingle<string> Result = new ResultSingle<string>();
+            try
+            {
+
+
+                Result.Success = true;
+                Result.Error = "";
+                Result.Message = "";
+                Result.Data = _licenciaGetnet;
+
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "Error";
                 Result.Message = ex.Message;
             }
             return Result;

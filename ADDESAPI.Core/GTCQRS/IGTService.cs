@@ -17,5 +17,6 @@ namespace ADDESAPI.Core.GTCQRS
         Task<ResultMultiple<EstructuraBombaDTO>> GetEstructuraBomba(GetEstructuraDTO request);
         Task<Result> CancelarPreset(GetEstructuraDTO request);
         Task<ResultSingle<ApiGtAnticipoRes>> AddAnticipo(AddAnticipoDTO req);
+        
     }
 }

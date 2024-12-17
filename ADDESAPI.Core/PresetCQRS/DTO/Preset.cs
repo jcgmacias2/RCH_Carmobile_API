@@ -8,6 +8,22 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
 {
     public class Preset
     {
+        public int Id { get; set; }
+        public int Gasolinera { get; set; }
+        public int Bomba { get; set; }
+        public int UMedida { get; set; }
+        public int Grado { get; set; }
+        public double Cantidad { get; set; }
+        public double Total { get; set; }
+        public int NoEmpleado { get; set; }
+        public string Vendedor { get; set; }
+        public int IdTipoPago { get; set; }
+        public string Moneda { get; set; }
+        public int Estatus { get; set; }
+        public string Error { get; set; }
+        public string CardNumber { get; set; }
+        public int LitrosRedimir { get; set; }
+        public double Descuento { get; set; }
     }
     public class PresetDTO
     {
@@ -34,6 +50,7 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public string Cliente { get; set; }
         public string PromoDesc { get; set; }
         public string? Empresa { get; set; }
+        public int? Producto { get; set; }
     }
     public class PresetGTDTO
     {

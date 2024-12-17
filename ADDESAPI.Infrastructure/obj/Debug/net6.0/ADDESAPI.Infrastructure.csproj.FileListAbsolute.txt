@@ -15,7 +15,6 @@ C:\Users\Admin\Documents\GitHub\ADDES_API_APP\ADEES_API\ADDESAPI.Infrastructure\
 C:\Users\Admin\Documents\GitHub\ADDES_API_APP\ADEES_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.pdb
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ADDESAPI.Infrastructure.deps.json
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ADDESAPI.Infrastructure.dll
-C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ref\ADDESAPI.Infrastructure.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ADDESAPI.Infrastructure.pdb
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ADDESAPI.Core.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\bin\Debug\net6.0\ADDESAPI.Core.pdb
@@ -24,7 +23,9 @@ C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\De
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.sourcelink.json
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.61F8E6AA.Up2Date
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.dll
-C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ref\ADDESAPI.Infrastructure.dll
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\refint\ADDESAPI.Infrastructure.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ADDESAPI.Infrastructure.pdb
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Infrastructure\obj\Debug\net6.0\ref\ADDESAPI.Infrastructure.dll

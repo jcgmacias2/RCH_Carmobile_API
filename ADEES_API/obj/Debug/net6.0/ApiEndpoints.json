@@ -1,0 +1,1009 @@
+[
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.AsignacionController",
+    "Method": "GetAsignacion",
+    "RelativePath": "Asignacion/GetAsignacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.AsignacionCQRS.DTO.GetAsignacionReqDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.Asignacion.DTO.AsignacionColaboradorTurno, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.AsignacionController",
+    "Method": "GetAsignaciones",
+    "RelativePath": "Asignacion/GetAsignaciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.AsignacionCQRS.DTO.GetAsignacionesReqDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.Asignacion.DTO.AsignacionesDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.BambuController",
+    "Method": "CancelQrPago",
+    "RelativePath": "Bambu/CancelQrPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.BambuCQRS.DTO.RequestGetQrDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.BambuController",
+    "Method": "FuelingQR",
+    "RelativePath": "Bambu/FuelingQR",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.BambuCQRS.DTO.RequestFuelingQrDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.BambuController",
+    "Method": "GetQrPago",
+    "RelativePath": "Bambu/GetQrPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.BambuCQRS.DTO.RequestGetQrDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.BambuCQRS.DTO.QR, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.BambuController",
+    "Method": "SetQrPago",
+    "RelativePath": "Bambu/SetQrPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.BambuCQRS.DTO.RequestSetQrDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.BambuCQRS.DTO.QR, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.CorteController",
+    "Method": "GetCorteColaborador",
+    "RelativePath": "Corte/GetCorteColaborador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.CorteCQRS.DTO.RequestCorteDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.CorteCQRS.DTO.CorteDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.DespachosController",
+    "Method": "GetDespacho",
+    "RelativePath": "Despachos/GetDespacho",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RequestTransaccionDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.DespachoDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.DespachosController",
+    "Method": "GetDespachos",
+    "RelativePath": "Despachos/GetDespachos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RequestTransaccionesDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.DespachoAppDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.DespachosController",
+    "Method": "Redemption",
+    "RelativePath": "Despachos/Redemption",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RedemptionReq, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RedemptionDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.DespachosController",
+    "Method": "RewardRedemption",
+    "RelativePath": "Despachos/RewardRedemption",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RedemptionReq, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.RedemptionDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.DespachosController",
+    "Method": "SetTipoPago",
+    "RelativePath": "Despachos/SetTipoPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.DespachosCQRS.DTO.ReqTransaccionTpDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetBombas",
+    "RelativePath": "Estacion/GetBombas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.EstacionCQRS.DTO.vBombas, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetCombustibles",
+    "RelativePath": "Estacion/GetCombustibles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.EstacionCQRS.DTO.EstacionCombustiblesDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetFormasPago",
+    "RelativePath": "Estacion/GetFormasPago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.EstacionCQRS.DTO.FormaPago, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetGasolinera",
+    "RelativePath": "Estacion/GetGasolinera",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.EstacionCQRS.DTO.vGasolinera, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetPrecios",
+    "RelativePath": "Estacion/GetPrecios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.PrecioGtReqDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.GTCQRS.DTO.PrecioBombaGtDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetTurno",
+    "RelativePath": "Estacion/GetTurno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.EstacionCQRS.DTO.TurnoActualDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.FajillaController",
+    "Method": "GetFajillasColaborador",
+    "RelativePath": "Fajilla/GetFajillasColaborador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.FajillaCQRS.DTO.ReqFajillas, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.FajillaCQRS.DTO.vFajillas, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "AddAnticipo",
+    "RelativePath": "GT/AddAnticipo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.AddAnticipoDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.GTCQRS.DTO.ApiGtAnticipoRes, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "CancelarPreset",
+    "RelativePath": "GT/CancelarPreset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.GetEstructuraDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "GetEstructuraBomba",
+    "RelativePath": "GT/GetEstructuraBomba",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.GetEstructuraDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.GTCQRS.DTO.EstructuraBombaDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "GetTypeBombas",
+    "RelativePath": "GT/GetTypeBombas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.GTCQRS.DTO.BombasTypeDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "Preset",
+    "RelativePath": "GT/Preset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.PresetCQRS.DTO.PresetDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "SetTypeBomba",
+    "RelativePath": "GT/SetTypeBomba",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.SetBombaTypeDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.GTController",
+    "Method": "SetTypeBombas",
+    "RelativePath": "GT/SetTypeBombas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.GTCQRS.DTO.SetBombasTypeDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ImpresoraController",
+    "Method": "GetImpresoras",
+    "RelativePath": "Impresora/GetImpresoras",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.ImpresoraCQRS.DTO.Impresoras, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "Login/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.Colaborador.DTO.RequestLoginDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.Colaborador.DTO.ColaboradorDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.PresetController",
+    "Method": "GetPresets",
+    "RelativePath": "Preset/GetPresets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.PresetCQRS.DTO.GetPresetsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.PresetCQRS.DTO.Preset, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.PreventaController",
+    "Method": "Add",
+    "RelativePath": "Preventa/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.PreventaCQRS.DTO.AddPreventaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.PreventaController",
+    "Method": "GetPreventa",
+    "RelativePath": "Preventa/GetPreventa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.PreventaCQRS.DTO.GetPreventaDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.PreventaCQRS.DTO.Preventa, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.PreventaController",
+    "Method": "GetPreventas",
+    "RelativePath": "Preventa/GetPreventas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.PreventaCQRS.DTO.GetPreventasDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.PreventaCQRS.DTO.Preventa, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.PreventaController",
+    "Method": "SetStatus",
+    "RelativePath": "Preventa/SetStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ADDESAPI.Core.GenericRequest\u00601[[ADDESAPI.Core.PreventaCQRS.DTO.SetPreventaStatusDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "Buscar",
+    "RelativePath": "Producto/Buscar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.ProducoCQRS.DTO.FindProductReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.ProducoCQRS.DTO.ProductoDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "GetFamilias",
+    "RelativePath": "Producto/GetFamilias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.ProducoCQRS.DTO.FamiliaDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "GetProductoCB",
+    "RelativePath": "Producto/GetProductoCB",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.ProducoCQRS.DTO.ProductoCodigoReqDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.ProducoCQRS.DTO.ProductoDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "GetProductosFamilia",
+    "RelativePath": "Producto/GetProductosFamilia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.ProducoCQRS.DTO.ProductoReqDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultMultiple\u00601[[ADDESAPI.Core.ProducoCQRS.DTO.ProductoDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "SetProducto",
+    "RelativePath": "Producto/SetProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.ProducoCQRS.DTO.ProductoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.ProductoController",
+    "Method": "SetProductoTicket",
+    "RelativePath": "Producto/SetProductoTicket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ADDESAPI.Core.ProducoCQRS.DTO.ProductoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.TanqueController",
+    "Method": "GetLecturas",
+    "RelativePath": "Tanque/GetLecturas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.TanqueCQRS.DTO.LecturasDTO, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ADEES_API.WeatherForecast, ADEES_API.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

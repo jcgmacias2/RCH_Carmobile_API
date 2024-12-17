@@ -847,7 +847,10 @@
           "Proteo5.HL": "0.7.2"
         },
         "runtime": {
-          "ADDESAPI.Core.dll": {}
+          "ADDESAPI.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

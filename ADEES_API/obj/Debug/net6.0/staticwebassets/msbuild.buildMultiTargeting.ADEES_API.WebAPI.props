@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ADEES_API.WebAPI.props" />
+</Project>

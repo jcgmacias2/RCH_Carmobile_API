@@ -12,7 +12,6 @@ C:\Users\Admin\Documents\GitHub\ADDES_API_APP\ADEES_API\ADDESAPI.Core\obj\Releas
 C:\Users\Admin\Documents\GitHub\ADDES_API_APP\ADEES_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.pdb
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\bin\Release\net6.0\ADDESAPI.Core.deps.json
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\bin\Release\net6.0\ADDESAPI.Core.dll
-C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\bin\Release\net6.0\ref\ADDESAPI.Core.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\bin\Release\net6.0\ADDESAPI.Core.pdb
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
@@ -22,3 +21,5 @@ C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ref\ADDESAPI.Core.dll
 C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.pdb
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\ADDESAPI.Core.sourcelink.json
+C:\Users\Admin\Documents\GitHub\RCH_Carmobile_API\ADDESAPI.Core\obj\Release\net6.0\refint\ADDESAPI.Core.dll

@@ -1,0 +1,4773 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ADDES WebApi",
+    "version": "v1.1.5"
+  },
+  "paths": {
+    "/Asignacion/GetAsignaciones": {
+      "post": {
+        "tags": [
+          "Asignacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionesReqDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionesReqDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionesReqDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionesDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionesDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionesDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Asignacion/GetAsignacion": {
+      "post": {
+        "tags": [
+          "Asignacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionReqDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionReqDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAsignacionReqDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionColaboradorTurnoResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionColaboradorTurnoResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AsignacionColaboradorTurnoResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Bambu/FuelingQR": {
+      "post": {
+        "tags": [
+          "Bambu"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestFuelingQrDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestFuelingQrDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestFuelingQrDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Bambu/GetQrPago": {
+      "post": {
+        "tags": [
+          "Bambu"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Bambu/SetQrPago": {
+      "post": {
+        "tags": [
+          "Bambu"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestSetQrDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestSetQrDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestSetQrDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QRResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Bambu/CancelQrPago": {
+      "post": {
+        "tags": [
+          "Bambu"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestGetQrDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Corte/GetCorteColaborador": {
+      "post": {
+        "tags": [
+          "Corte"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestCorteDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestCorteDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestCorteDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorteDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorteDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorteDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Despachos/GetDespachos": {
+      "post": {
+        "tags": [
+          "Despachos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionesDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionesDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionesDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoAppDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoAppDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoAppDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Despachos/GetDespacho": {
+      "post": {
+        "tags": [
+          "Despachos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTransaccionDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DespachoDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Despachos/SetTipoPago": {
+      "post": {
+        "tags": [
+          "Despachos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqTransaccionTpDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqTransaccionTpDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqTransaccionTpDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Despachos/Redemption": {
+      "post": {
+        "tags": [
+          "Despachos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Despachos/RewardRedemption": {
+      "post": {
+        "tags": [
+          "Despachos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RedemptionReqGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedemptionDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetBombas": {
+      "get": {
+        "tags": [
+          "Estacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/vBombasResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vBombasResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vBombasResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetCombustibles": {
+      "get": {
+        "tags": [
+          "Estacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstacionCombustiblesDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstacionCombustiblesDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstacionCombustiblesDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetPrecios": {
+      "post": {
+        "tags": [
+          "Estacion"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrecioGtReqDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrecioGtReqDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PrecioGtReqDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrecioBombaGtDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrecioBombaGtDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrecioBombaGtDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetGasolinera": {
+      "get": {
+        "tags": [
+          "Estacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/vGasolineraResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vGasolineraResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vGasolineraResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetTurno": {
+      "get": {
+        "tags": [
+          "Estacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurnoActualDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurnoActualDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TurnoActualDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Estacion/GetFormasPago": {
+      "get": {
+        "tags": [
+          "Estacion"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormaPagoResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormaPagoResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormaPagoResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Fajilla/GetFajillasColaborador": {
+      "post": {
+        "tags": [
+          "Fajilla"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqFajillasGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqFajillasGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReqFajillasGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/vFajillasResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vFajillasResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/vFajillasResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/Preset": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresetDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresetDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PresetDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/SetTypeBombas": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombasTypeDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombasTypeDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombasTypeDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/SetTypeBomba": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombaTypeDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombaTypeDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetBombaTypeDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/GetTypeBombas": {
+      "get": {
+        "tags": [
+          "GT"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BombasTypeDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BombasTypeDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BombasTypeDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/GetEstructuraBomba": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstructuraBombaDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstructuraBombaDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EstructuraBombaDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/CancelarPreset": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetEstructuraDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GT/AddAnticipo": {
+      "post": {
+        "tags": [
+          "GT"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAnticipoDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAnticipoDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddAnticipoDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiGtAnticipoResResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiGtAnticipoResResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiGtAnticipoResResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Impresora/GetImpresoras": {
+      "get": {
+        "tags": [
+          "Impresora"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImpresorasResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImpresorasResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImpresorasResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Login/Login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestLoginDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestLoginDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestLoginDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ColaboradorDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ColaboradorDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ColaboradorDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Preset/GetPresets": {
+      "post": {
+        "tags": [
+          "Preset"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPresetsDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPresetsDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPresetsDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PresetResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PresetResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PresetResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Preventa/Add": {
+      "post": {
+        "tags": [
+          "Preventa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPreventaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPreventaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPreventaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Preventa/GetPreventas": {
+      "post": {
+        "tags": [
+          "Preventa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventasDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventasDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventasDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Preventa/GetPreventa": {
+      "post": {
+        "tags": [
+          "Preventa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventaDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventaDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetPreventaDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PreventaResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Preventa/SetStatus": {
+      "post": {
+        "tags": [
+          "Preventa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPreventaStatusDTOGenericRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPreventaStatusDTOGenericRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetPreventaStatusDTOGenericRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/GetFamilias": {
+      "get": {
+        "tags": [
+          "Producto"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FamiliaDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FamiliaDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FamiliaDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/GetProductosFamilia": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoReqDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoReqDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoReqDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/GetProductoCB": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoCodigoReqDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoCodigoReqDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoCodigoReqDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/SetProductoTicket": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/SetProducto": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoRequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32ResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Producto/Buscar": {
+      "post": {
+        "tags": [
+          "Producto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindProductReq"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindProductReq"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindProductReq"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductoDTOResultMultiple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Tanque/GetLecturas": {
+      "get": {
+        "tags": [
+          "Tanque"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LecturasDTOResultSingle"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LecturasDTOResultSingle"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LecturasDTOResultSingle"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddAnticipoDTO": {
+        "type": "object",
+        "properties": {
+          "fechaCG": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "islaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fchCor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idTipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "monto": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddAnticipoDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/AddAnticipoDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddPreventaDTO": {
+        "type": "object",
+        "properties": {
+          "tipo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionTipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idProducto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "importe": {
+            "type": "number",
+            "format": "double"
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiGtAnticipoRes": {
+        "type": "object",
+        "properties": {
+          "fch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nrotur": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codisl": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codres": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sec": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fchcor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codval": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "can": {
+            "type": "number",
+            "format": "double"
+          },
+          "mto": {
+            "type": "number",
+            "format": "double"
+          },
+          "codgas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mcaacu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codcli": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imp": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiGtAnticipoResResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ApiGtAnticipoRes"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionColaboradorDTO": {
+        "type": "object",
+        "properties": {
+          "idBomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isla": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noBomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionColaboradorTurno": {
+        "type": "object",
+        "properties": {
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asignacion": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AsignacionDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionColaboradorTurnoResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AsignacionColaboradorTurno"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionDTO": {
+        "type": "object",
+        "properties": {
+          "idBomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bomba": {
+            "type": "string",
+            "nullable": true
+          },
+          "noIsla": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noBomba": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionesDTO": {
+        "type": "object",
+        "properties": {
+          "colaboradores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ColaboradoresDTO"
+            },
+            "nullable": true
+          },
+          "asignaciones": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AsignacionColaboradorDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionesDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/AsignacionesDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Asistencia": {
+        "type": "object",
+        "properties": {
+          "iD_Empleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hayChecadas": {
+            "type": "boolean"
+          },
+          "descripcionEstacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaChecada": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "codigoEstacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BombasTypeDTO": {
+        "type": "object",
+        "properties": {
+          "fullService": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "selfService": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BombasTypeDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/BombasTypeDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ColaboradorDTO": {
+        "type": "object",
+        "properties": {
+          "numeroVentuk": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEstacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "puesto": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "idRol": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCorte": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "asignacion": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AsignacionColaboradorTurno"
+            },
+            "nullable": true
+          },
+          "asistenciaVentuk": {
+            "$ref": "#/components/schemas/Asistencia"
+          },
+          "impresoras": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Impresoras"
+            },
+            "nullable": true
+          },
+          "configuracion": {
+            "$ref": "#/components/schemas/ConfiguracionAppDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ColaboradorDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ColaboradorDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ColaboradoresDTO": {
+        "type": "object",
+        "properties": {
+          "numeroVentuk": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEstacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "puesto": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfiguracionAppDTO": {
+        "type": "object",
+        "properties": {
+          "licenciaTerminal": {
+            "type": "string",
+            "nullable": true
+          },
+          "modulos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ModuloDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CorteBombaDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadCombustible": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeCombustible": {
+            "type": "number",
+            "format": "double"
+          },
+          "cantidadProductos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeProductos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeFajillasMXN": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeFajillasUSD": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeMonederos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeJarreos": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CorteDTO": {
+        "type": "object",
+        "properties": {
+          "cantidadCombustible": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeCombustible": {
+            "type": "number",
+            "format": "double"
+          },
+          "cantidadProductos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeProductos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeFajillasMXN": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeFajillasUSD": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeMonederos": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeJarreos": {
+            "type": "number",
+            "format": "double"
+          },
+          "tipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeTDC": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeTDD": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeAMEX": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeTarjetasDiesel": {
+            "type": "number",
+            "format": "double"
+          },
+          "importeDevolucionesTarjetas": {
+            "type": "number",
+            "format": "double"
+          },
+          "bombas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CorteBombaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CorteDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/CorteDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoAppDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "idTipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "productos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "detalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DespachoDetalleAppDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoAppDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DespachoAppDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoDetalleAppDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "despacho": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoDetalleDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "valorUnitario": {
+            "type": "number",
+            "format": "double"
+          },
+          "subtotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "iva": {
+            "type": "number",
+            "format": "double"
+          },
+          "ieps": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "cuotaIEPS": {
+            "type": "number",
+            "format": "double"
+          },
+          "tasaIVA": {
+            "type": "number",
+            "format": "double"
+          },
+          "claveProdServ": {
+            "type": "string",
+            "nullable": true
+          },
+          "claveUnidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEstacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticket": {
+            "type": "string",
+            "nullable": true
+          },
+          "rfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "razonSocial": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "domicilioFiscal": {
+            "type": "string",
+            "nullable": true
+          },
+          "permisoCre": {
+            "type": "string",
+            "nullable": true
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCG": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fchCor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaCorte": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "islaID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subtotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "iva": {
+            "type": "number",
+            "format": "double"
+          },
+          "ieps": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "idTipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "formaPagoSAT": {
+            "type": "string",
+            "nullable": true
+          },
+          "cliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uuid": {
+            "type": "string",
+            "nullable": true
+          },
+          "descProductos": {
+            "type": "string",
+            "nullable": true
+          },
+          "ventaApp": {
+            "type": "boolean"
+          },
+          "tipoPagoApp": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "webID": {
+            "type": "string",
+            "nullable": true
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "puntos": {
+            "type": "number",
+            "format": "double"
+          },
+          "litrosRedimidos": {
+            "type": "number",
+            "format": "double"
+          },
+          "promoDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "promoCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendedor": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalle": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DespachoDetalleDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DespachoDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/DespachoDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstacionCombustiblesDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProducto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "gradoProducto": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstacionCombustiblesDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EstacionCombustiblesDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstructuraBombaDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "grado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstructuraBombaDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EstructuraBombaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FamiliaDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FamiliaDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FamiliaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FindProductReq": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormaPago": {
+        "type": "object",
+        "properties": {
+          "claveSAT": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orden": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aplicaEstacion": {
+            "type": "boolean"
+          },
+          "claveCG": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FormaPagoResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FormaPago"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAsignacionesReqDTO": {
+        "type": "object",
+        "properties": {
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAsignacionesReqDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/GetAsignacionesReqDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAsignacionReqDTO": {
+        "type": "object",
+        "properties": {
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAsignacionReqDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/GetAsignacionReqDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetEstructuraDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetEstructuraDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/GetEstructuraDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPresetsDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPreventaDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPreventaDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/GetPreventaDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPreventasDTO": {
+        "type": "object",
+        "properties": {
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetPreventasDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/GetPreventasDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Impresoras": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "string",
+            "nullable": true
+          },
+          "ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "marca": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ImpresorasResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Impresoras"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Int32ResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LecturaDTO": {
+        "type": "object",
+        "properties": {
+          "codProducto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "transaccion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroTanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoTanque": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "volumen": {
+            "type": "number",
+            "format": "double"
+          },
+          "volCxT": {
+            "type": "number",
+            "format": "double"
+          },
+          "volumenH2O": {
+            "type": "number",
+            "format": "double"
+          },
+          "volumenRecepcion": {
+            "type": "number",
+            "format": "double"
+          },
+          "temperatura": {
+            "type": "number",
+            "format": "double"
+          },
+          "porcentaje": {
+            "type": "number",
+            "format": "double"
+          },
+          "porLlenar": {
+            "type": "number",
+            "format": "double"
+          },
+          "documento": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LecturasDTO": {
+        "type": "object",
+        "properties": {
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "rfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "razonSocial": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaImpresion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lecturas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LecturaDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LecturasDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/LecturasDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ModuloDTO": {
+        "type": "object",
+        "properties": {
+          "modulo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecioBombaGtDTO": {
+        "type": "object",
+        "properties": {
+          "executed": {
+            "type": "boolean"
+          },
+          "response": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoProducto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "grado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descipcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecioBombaGtDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrecioBombaGtDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecioGtReqDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PrecioGtReqDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/PrecioGtReqDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Preset": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uMedida": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "grado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendedor": {
+            "type": "string",
+            "nullable": true
+          },
+          "idTipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "litrosRedimir": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PresetDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "grado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "uMedida": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rfc": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "idPreventa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "usdRecibidos": {
+            "type": "number",
+            "format": "double"
+          },
+          "cambioUSD": {
+            "type": "number",
+            "format": "double"
+          },
+          "cambioMXN": {
+            "type": "number",
+            "format": "double"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "litrosRedimir": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "brandId": {
+            "type": "string",
+            "nullable": true
+          },
+          "programId": {
+            "type": "string",
+            "nullable": true
+          },
+          "cliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "promoDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "empresa": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PresetDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/PresetDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PresetResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Preset"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Preventa": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcionTipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCambio": {
+            "type": "number",
+            "format": "double"
+          },
+          "idProducto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "importe": {
+            "type": "number",
+            "format": "double"
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PreventaResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Preventa"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PreventaResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/Preventa"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Producto": {
+        "type": "object",
+        "properties": {
+          "cantidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoExterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "tasaIVA": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoCodigoReqDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoExterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoBarras": {
+            "type": "string",
+            "nullable": true
+          },
+          "habilitado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "tasaIVA": {
+            "type": "number",
+            "format": "double"
+          },
+          "cuotaIEPS": {
+            "type": "number",
+            "format": "double"
+          },
+          "idFamilia": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoDTOResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductoDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProductoDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoReqDTO": {
+        "type": "object",
+        "properties": {
+          "familia": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoRequestDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Producto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QR": {
+        "type": "object",
+        "properties": {
+          "estacionPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "combustible": {
+            "type": "string",
+            "nullable": true
+          },
+          "formaPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "referenciaPago": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "litros": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalConDescuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaCupon": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "QRResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/QR"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RedemptionDTO": {
+        "type": "object",
+        "properties": {
+          "litrosRedimidos": {
+            "type": "number",
+            "format": "double"
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "balance": {
+            "type": "number",
+            "format": "double"
+          },
+          "previousBalance": {
+            "type": "number",
+            "format": "double"
+          },
+          "redimidos": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RedemptionDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/RedemptionDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RedemptionReq": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gasolinera": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "litrosRedimir": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "type": "number",
+            "format": "double"
+          },
+          "total": {
+            "type": "number",
+            "format": "double"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendedor": {
+            "type": "string",
+            "nullable": true
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "idTipoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCG": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fchCor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "islaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "brandId": {
+            "type": "string",
+            "nullable": true
+          },
+          "programId": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "producto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "promoDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "empresa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RedemptionReqGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RedemptionReq"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReqFajillas": {
+        "type": "object",
+        "properties": {
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "estacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReqFajillasGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ReqFajillas"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReqTransaccionTpDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoPago": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReqTransaccionTpDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ReqTransaccionTpDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestCorteDTO": {
+        "type": "object",
+        "properties": {
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestCorteDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestCorteDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestFuelingQrDTO": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "ticket": {
+            "type": "string",
+            "nullable": true
+          },
+          "charge": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuel_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestFuelingQrDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestFuelingQrDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestGetQrDTO": {
+        "type": "object",
+        "properties": {
+          "qr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestGetQrDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestGetQrDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestLoginDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestLoginDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestLoginDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestSetQrDTO": {
+        "type": "object",
+        "properties": {
+          "qr": {
+            "type": "string",
+            "nullable": true
+          },
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "string",
+            "nullable": true
+          },
+          "noEmpleado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestSetQrDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestSetQrDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestTransaccionDTO": {
+        "type": "object",
+        "properties": {
+          "transaccion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestTransaccionDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestTransaccionDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestTransaccionesDTO": {
+        "type": "object",
+        "properties": {
+          "bomba": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RequestTransaccionesDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/RequestTransaccionesDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Result": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetBombasTypeDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullService": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "selfService": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetBombasTypeDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SetBombasTypeDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetBombaTypeDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetBombaTypeDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SetBombaTypeDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetPreventaStatusDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetPreventaStatusDTOGenericRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/SetPreventaStatusDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TurnoActualDTO": {
+        "type": "object",
+        "properties": {
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TurnoActualDTOResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/TurnoActualDTO"
+          }
+        },
+        "additionalProperties": false
+      },
+      "vBombas": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bomba": {
+            "type": "string",
+            "nullable": true
+          },
+          "isla": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numero": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "vBombasResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/vBombas"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "vFajillas": {
+        "type": "object",
+        "properties": {
+          "noEstacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "noEmpleado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "folio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaHora": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "monto": {
+            "type": "number",
+            "format": "double"
+          },
+          "turno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bomba": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isla": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "moneda": {
+            "type": "string",
+            "nullable": true
+          },
+          "idCajero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cajero": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaAutorizacion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idValor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estatusDesc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "vFajillasResultMultiple": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/vFajillas"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "vGasolinera": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "denominacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "turnoActual": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigoExterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "clave": {
+            "type": "string",
+            "nullable": true
+          },
+          "permisoCRE": {
+            "type": "string",
+            "nullable": true
+          },
+          "cp": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "vGasolineraResultSingle": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "error": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/vGasolinera"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Ingrese un token valido",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

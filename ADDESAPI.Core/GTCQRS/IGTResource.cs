@@ -23,7 +23,5 @@ namespace ADDESAPI.Core.GTCQRS
         Task<ResultSingle<ApiGtAnticipoRes>> AddAnticipo(string token, string json);
         Task<Result> SetDescuento(int transaccion, double descuento, string cardNumber, string PromoDesc, int promoCode, double litrosRedimidos, string nombreCliente, int noEmpleado, string vendedor);
         Task<ResultSingle<DescuentoDTO>> GetDescuento(string transaccion);
-        //Task<Result> SetDiscount(int transaccion, double discount, string cardNumber, string promotion, int idPromotion, double littersApp, string clientName);
-        //Task<ResultSingle<DiscountDTO>> GetDiscount(string transaccion);
     }
 }

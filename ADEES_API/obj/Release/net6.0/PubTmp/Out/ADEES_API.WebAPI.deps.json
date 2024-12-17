@@ -866,7 +866,10 @@
           "Proteo5.HL": "0.7.2"
         },
         "runtime": {
-          "ADDESAPI.Core.dll": {}
+          "ADDESAPI.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ADDESAPI.Infrastructure/1.0.0": {
@@ -879,7 +882,10 @@
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
-          "ADDESAPI.Infrastructure.dll": {}
+          "ADDESAPI.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -9,7 +9,8 @@ namespace ADDESAPI.Core.PresetCQRS
 {
     public interface IPresetResource
     {
-        Task<Result> SavePreset(PresetDTO request);
+        Task<Result> SavePreset(Preset request);
         Task<Result> PresetGatewayRes(PresetGatewayRes request);
+        Task<ResultMultiple<Preset>> GetPresets(int pageSize, int page, int bomba);
     }
 }

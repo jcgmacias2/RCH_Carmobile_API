@@ -79,6 +79,7 @@ builder.Services.AddTransient<IGTService, GTService>();
 builder.Services.AddTransient<IEstacionResource, EstacionResource>();
 builder.Services.AddTransient<IEstacionService, EstacionService>();
 builder.Services.AddTransient<IPresetResource, PresetResource>();
+builder.Services.AddTransient<IPresetService, PresetService>();
 builder.Services.AddTransient<IProductoResource, ProductoResource>();
 builder.Services.AddTransient<IProductoService, ProductoService>();
 builder.Services.AddTransient<ICorteResource, CorteResource>();
@@ -96,6 +97,7 @@ builder.Services.AddTransient<ITanqueResource, TanqueResource>();
 builder.Services.AddTransient<ITanqueService, TanqueService>();
 builder.Services.AddTransient<IModuloResource, ModuloResource>();
 
+
 builder.Services.AddCors(o =>
 {
     o.AddPolicy("ThePolicy", b =>
@@ -108,7 +110,7 @@ builder.Services.AddCors(o =>
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.1.4" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.1.5" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

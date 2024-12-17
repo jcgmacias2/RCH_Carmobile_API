@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "d1zeOKz41pknVM3olnipm8eJYH/XEHa6/GpAbQCcy1I=",
+  "Hash": "rWCLxRb5UAB9mZxMrFXBBSeSrmpoFVh+K4dJxPQsR08=",
   "Source": "ADEES_API.WebAPI",
   "BasePath": "_content/ADEES_API.WebAPI",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

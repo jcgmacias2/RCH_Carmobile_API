@@ -43,6 +43,25 @@ namespace ADDESAPI.Core.GTCQRS
                 Result ResultValidate = validator.GetValidate(valuesToValidate);
                 if (!ResultValidate.Success)
                 {
+                    var preset = new Preset { 
+                        Bomba = request.Bomba,
+                        UMedida = request.UMedida,
+                        Grado = request.Grado,
+                        Cantidad = request.Cantidad,
+                        Total = request.Total,
+                        NoEmpleado = request.NoEmpleado,
+                        Vendedor = request.Nombre,
+                        IdTipoPago = request.TipoPago,
+                        Moneda = request.Moneda,
+                        Estatus = 0,
+                        Error = ResultValidate.Message,
+                        CardNumber = request.CardNumber,
+                        LitrosRedimir = request.LitrosRedimir,
+                        Descuento = request.Descuento
+                    };
+
+                    var ResultSavePreset = await _resourcePreset.SavePreset(preset);
+
                     Result.Success = ResultValidate.Success;
                     Result.Error = ResultValidate.Error;
                     Result.Message = ResultValidate.Message;
@@ -63,6 +82,26 @@ namespace ADDESAPI.Core.GTCQRS
                 var ResultToken = await _resource.GetToken();
                 if (!ResultToken.Success)
                 {
+                    var preset = new Preset
+                    {
+                        Bomba = request.Bomba,
+                        UMedida = request.UMedida,
+                        Grado = request.Grado,
+                        Cantidad = request.Cantidad,
+                        Total = request.Total,
+                        NoEmpleado = request.NoEmpleado,
+                        Vendedor = request.Nombre,
+                        IdTipoPago = request.TipoPago,
+                        Moneda = request.Moneda,
+                        Estatus = 0,
+                        Error = ResultToken.Message,
+                        CardNumber = request.CardNumber,
+                        LitrosRedimir = request.LitrosRedimir,
+                        Descuento = request.Descuento
+                    };
+
+                    var ResultSavePreset = await _resourcePreset.SavePreset(preset);
+
                     Result.Success = ResultToken.Success;
                     Result.Error = ResultToken.Error;
                     Result.Message = ResultToken.Message;
@@ -73,23 +112,31 @@ namespace ADDESAPI.Core.GTCQRS
                 var ResultStatus = await GetStatusB(request.Bomba, token);
                 if (!ResultStatus.Success)
                 {
+                    var preset = new Preset
+                    {
+                        Bomba = request.Bomba,
+                        UMedida = request.UMedida,
+                        Grado = request.Grado,
+                        Cantidad = request.Cantidad,
+                        Total = request.Total,
+                        NoEmpleado = request.NoEmpleado,
+                        Vendedor = request.Nombre,
+                        IdTipoPago = request.TipoPago,
+                        Moneda = request.Moneda,
+                        Estatus = 0,
+                        Error = ResultStatus.Message,
+                        CardNumber = request.CardNumber,
+                        LitrosRedimir = request.LitrosRedimir,
+                        Descuento = request.Descuento
+                    };
+
+                    var ResultSavePreset = await _resourcePreset.SavePreset(preset);
+
                     Result.Success = ResultStatus.Success;
                     Result.Error = ResultStatus.Error;
                     Result.Message = ResultStatus.Message;
                     return Result;
                 }
-
-                //var data = new PresetGTDTO { 
-                //    Bomba = request.Bomba,
-                //    Grado = request.Grado,
-                //    CantOimp = request.Cantidad,
-                //    CodDespachador = request.NoEmpleado,
-                //    LAD = 1,
-                //    tiptrn = request.TipoPago,
-                //    ClientApp = new PresetClienteAppGTDTO { QrPago = request.QrPago, RFC = request.RFC, QrCupon = request.QrCupon, Cupon = request.Cupon, Total = request.Total, Descuento = request.Descuento, Estacion = request. }
-                //};
-                //string jsonPreset = JsonConvert.SerializeObject(data);
-
                 
                 var ResultPreset = await _resource.SetPreset(token, request);
                 Result.Success = ResultPreset.Success;
@@ -98,59 +145,54 @@ namespace ADDESAPI.Core.GTCQRS
 
                 if (Result.Success)
                 {
+                    var preset = new Preset
+                    {
+                        Bomba = request.Bomba,
+                        UMedida = request.UMedida,
+                        Grado = request.Grado,
+                        Cantidad = request.Cantidad,
+                        Total = request.Total,
+                        NoEmpleado = request.NoEmpleado,
+                        Vendedor = request.Nombre,
+                        IdTipoPago = request.TipoPago,
+                        Moneda = request.Moneda,
+                        Estatus = 1,
+                        Error = ResultPreset.Message,
+                        CardNumber = request.CardNumber,
+                        LitrosRedimir = request.LitrosRedimir,
+                        Descuento = request.Descuento
+                    };
+
+                    var ResultSavePreset = await _resourcePreset.SavePreset(preset);
+
                     if (request.IdPreventa > 0)
                     {
                         var setPreventa = await _resourcePreventa.SetStatus(new SetPreventaStatusDTO { Id = request.IdPreventa, Estatus = 2 });
-                    }
-                    
+                    }                    
+                }
+                else
+                {
+                    var preset = new Preset
+                    {
+                        Bomba = request.Bomba,
+                        UMedida = request.UMedida,
+                        Grado = request.Grado,
+                        Cantidad = request.Cantidad,
+                        Total = request.Total,
+                        NoEmpleado = request.NoEmpleado,
+                        Vendedor = request.Nombre,
+                        IdTipoPago = request.TipoPago,
+                        Moneda = request.Moneda,
+                        Estatus = 0,
+                        Error = ResultPreset.Message,
+                        CardNumber = request.CardNumber,
+                        LitrosRedimir = request.LitrosRedimir,
+                        Descuento = request.Descuento
+                    };
+
+                    var ResultSavePreset = await _resourcePreset.SavePreset(preset);
                 }
 
-                //  var ResultPreset = await _resource.SendCommand(command, token);
-                //    var savePresetR = await _resourcePreset.PresetGatewayRes(new PresetGatewayRes { Fecha = DateTime.Now, DespachoAnterior = 0, NoBomba = request.Bomba, Preset = command, RespuestaGateway = ResultPreset.Data.ToString() });
-                //    if (ResultPreset.Success)
-                //    {
-                //        var data = ResultPreset.Data;
-                //        if (data.executed)
-                //        {
-                //            var response = ResultPreset.Data.response.Split('|');
-                //            string info = response[0];
-                //            string estatus = response[1];
-
-                //            if (estatus == "1")
-                //            {
-                //                var savePreset = await _resourcePreset.SavePreset(request);
-                //                if (!savePreset.Success)
-                //                {
-                //                    Result.Success = false;
-                //                    Result.Error = "";
-                //                    Result.Message = $"Error al guardar el preset en SQL, el Preset se envio al gateway correctamente";
-                //                }
-                //                Result.Success = true;
-                //                Result.Error = "";
-                //                Result.Message = $"Preset enviado";
-
-                //            }
-                //            else
-                //            {
-                //                string mensaje = response[2];
-                //                Result.Success = false;
-                //                Result.Error = "Error en preset";
-                //                Result.Message = $"{mensaje}. {response}";
-                //            }
-                //        }
-                //        else
-                //        {
-                //            Result.Success = false;
-                //            Result.Error = "Error en la ejecucion";
-                //            Result.Message = data.response.ToString();
-                //        }
-                //    }
-                //    else
-                //    {
-                //        Result.Success = false;
-                //        Result.Error = ResultPreset.Error;
-                //        Result.Message = ResultPreset.Message;
-                //    }
             }
             catch (Exception ex)
             {
@@ -549,5 +591,6 @@ namespace ADDESAPI.Core.GTCQRS
             }
             return Result;
         }
+
     }
 }

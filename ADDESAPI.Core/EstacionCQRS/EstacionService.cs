@@ -1,6 +1,8 @@
 ﻿using ADDESAPI.Core.EstacionCQRS.DTO;
 using ADDESAPI.Core.GTCQRS;
 using ADDESAPI.Core.GTCQRS.DTO;
+using ADDESAPI.Core.TipoCambioDTO;
+using ADDESAPI.Core.TipoCambioDTO.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,13 @@ namespace ADDESAPI.Core.EstacionCQRS
     {
         private readonly IEstacionResource _resource;
         private readonly IGTResource _resourceGT;
+        private readonly ITipoCambioResource _resourceTC;
 
-        public EstacionService(IEstacionResource resource, IGTResource resourceGT)
+        public EstacionService(IEstacionResource resource, IGTResource resourceGT, ITipoCambioResource resourceTC)
         {
             _resource = resource;
             _resourceGT = resourceGT;
+            _resourceTC = resourceTC;
         }
         public async Task<ResultMultiple<vBombas>> GetBombas()
         {
@@ -240,6 +244,32 @@ namespace ADDESAPI.Core.EstacionCQRS
             {
                 Result = await _resource.GetFormasPago();
 
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
+        public async Task<ResultSingle<vTipoCambio>> GetTipoCambio()
+        {
+            ResultSingle<vTipoCambio> Result = new ResultSingle<vTipoCambio>();
+            try
+            {
+                var ResultGasolinera = await _resource.GetGasolinera();
+                if (!ResultGasolinera.Success)
+                {
+                    Result.Success = false;
+                    Result.Error = ResultGasolinera.Error;
+                    Result.Message = ResultGasolinera.Message;
+                    return Result;
+                }
+
+                var Gasolinera = ResultGasolinera.Data;
+
+                Result = await _resourceTC.GetTipoCambio(Gasolinera.Fecha.ToString("yyyyMMdd"));
             }
             catch (Exception ex)
             {

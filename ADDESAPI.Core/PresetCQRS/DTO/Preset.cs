@@ -24,6 +24,7 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public string CardNumber { get; set; }
         public int LitrosRedimir { get; set; }
         public double Descuento { get; set; }
+        public DateTime Fecha { get; set; }
     }
     public class PresetDTO
     {

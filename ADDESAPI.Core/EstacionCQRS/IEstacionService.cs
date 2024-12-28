@@ -1,5 +1,6 @@
 ﻿using ADDESAPI.Core.EstacionCQRS.DTO;
 using ADDESAPI.Core.GTCQRS.DTO;
+using ADDESAPI.Core.TipoCambioDTO.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace ADDESAPI.Core.EstacionCQRS
         Task<ResultSingle<vGasolinera>> GetGasolinera();
         Task<ResultSingle<TurnoActualDTO>> GetTurno();
         Task<ResultMultiple<FormaPago>> GetFormasPago();
+        Task<ResultSingle<vTipoCambio>> GetTipoCambio();
     }
 }

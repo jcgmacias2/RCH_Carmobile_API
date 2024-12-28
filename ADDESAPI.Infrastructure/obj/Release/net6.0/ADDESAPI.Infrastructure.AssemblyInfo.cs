@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADDESAPI.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b356a739110265f3e483de5082d5fdde98896f2a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc71114e3539b3bb8799527e15f190a201d0fb9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADDESAPI.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADDESAPI.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

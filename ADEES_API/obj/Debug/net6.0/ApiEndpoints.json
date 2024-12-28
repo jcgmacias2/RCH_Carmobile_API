@@ -419,6 +419,26 @@
   },
   {
     "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
+    "Method": "GetTipoCambio",
+    "RelativePath": "Estacion/GetTipoCambio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ADDESAPI.Core.ResultSingle\u00601[[ADDESAPI.Core.TipoCambioDTO.DTO.vTipoCambio, ADDESAPI.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ADEES_API.WebAPI.Controllers.EstacionController",
     "Method": "GetTurno",
     "RelativePath": "Estacion/GetTurno",
     "HttpMethod": "GET",

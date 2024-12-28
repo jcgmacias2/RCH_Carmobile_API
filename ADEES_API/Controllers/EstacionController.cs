@@ -2,6 +2,7 @@
 using ADDESAPI.Core.EstacionCQRS;
 using ADDESAPI.Core.EstacionCQRS.DTO;
 using ADDESAPI.Core.GTCQRS.DTO;
+using ADDESAPI.Core.TipoCambioDTO.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,6 +56,12 @@ namespace ADEES_API.WebAPI.Controllers
         public async Task<ResultMultiple<FormaPago>> GetFormasPago()
         {
             return await _service.GetFormasPago();
+        }
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ResultSingle<vTipoCambio>> GetTipoCambio()
+        {
+            return await _service.GetTipoCambio();
         }
     }
 }

@@ -9,6 +9,6 @@ namespace ADDESAPI.Core.PresetCQRS
 {
     public interface IPresetService
     {
-        Task<ResultMultiple<Preset>> GetPresets(GetPresetsDTO req);
+        Task<ResultMultiple<Preset>> GetPresets(GetPresetsDTO req, string user);
     }
 }

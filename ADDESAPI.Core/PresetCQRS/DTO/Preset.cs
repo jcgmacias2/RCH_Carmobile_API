@@ -123,6 +123,14 @@ namespace ADDESAPI.Core.PresetCQRS.DTO
         public double TipoCambio { get; set; }
         public double CambioUSD { get; set; }
         public double CambioMXN { get; set; }
+        public string CardNumber { get; set; }
+        public string Cliente { get; set; }
+        public string ProgramId { get; set; }
+        public string BrandId { get; set; }
+        public string Empresa { get; set; }
+        public int LitrosRedimir { get; set; }
+        public double Descuento { get; set; }
+        public string PromoDesc { get; set; }
         public List<PresetDolaresDetAppGTDTO> Detalle { get; set; }
     }
     public class PresetDolaresDetAppGTDTO

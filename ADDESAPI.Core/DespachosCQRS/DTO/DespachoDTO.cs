@@ -82,6 +82,12 @@ namespace ADDESAPI.Core.DespachosCQRS.DTO
         public string TipoPago { get; set; }
         public string Descripcion { get; set; }
         public int Productos { get; set; }
+        public string CardNumber { get; set; }
+        public string NombreCliente { get; set; }
+        public double Descuento { get; set; }
+        public double litrosRedimidos { get; set; }
+        public string PromoDesc { get; set; }
+        public int PromoCode { get; set; }
         public List<DespachoDetalleAppDTO> Detalle { get; set; }
 
     }

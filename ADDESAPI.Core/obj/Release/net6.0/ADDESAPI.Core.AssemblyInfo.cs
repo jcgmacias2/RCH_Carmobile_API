@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADDESAPI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc71114e3539b3bb8799527e15f190a201d0fb9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef00bf2b83d459fedc4a2fc6e02fe3ad084dd661")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADDESAPI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADDESAPI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

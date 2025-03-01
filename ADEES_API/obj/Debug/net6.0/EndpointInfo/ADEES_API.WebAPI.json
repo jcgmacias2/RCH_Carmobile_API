@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "ADDES WebApi",
-    "version": "v1.1.5"
+    "version": "v1.1.9"
   },
   "paths": {
     "/Asignacion/GetAsignaciones": {
@@ -2533,6 +2533,30 @@
             "nullable": true
           },
           "productos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "descuento": {
+            "type": "number",
+            "format": "double"
+          },
+          "litrosRedimidos": {
+            "type": "number",
+            "format": "double"
+          },
+          "promoDesc": {
+            "type": "string",
+            "nullable": true
+          },
+          "promoCode": {
             "type": "integer",
             "format": "int32"
           },

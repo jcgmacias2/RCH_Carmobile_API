@@ -12,5 +12,6 @@ namespace ADDESAPI.Core.Colaborador
         Task<ResultSingle<vColaborador>> Login(string usuario, string password);
         Task<ResultSingle<string>> GenerateTokenJwt(string username);
         Task<ResultMultiple<ColaboradoresDTO>> GetColaboradores();
+        Task<ResultSingle<ColaboradoresDTO>> GetColaborador(string user);
     }
 }

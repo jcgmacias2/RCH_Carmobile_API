@@ -205,7 +205,7 @@ namespace ADDESAPI.Infrastructure
                 {
                     clientApp.Tipo = 3;
                     clientApp.jarreoApp = new PresetJarreoAppGTDTO();
-                    clientApp.USD = new PresetDolaresAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, NoEmpleado = preset.NoEmpleado, Nombre = preset.Nombre, Turno = 0, Fecha = "", Hora = "", FechaCorte = "", Bomba = preset.Bomba, ImporteDespacho = 0, DolaresRecibidos = preset.UsdRecibidos, TipoCambio = preset.TipoCambio, CambioUSD = preset.CambioUSD, CambioMXN = preset.CambioMXN, FechaCG = 0};
+                    clientApp.USD = new PresetDolaresAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, NoEmpleado = preset.NoEmpleado, Nombre = preset.Nombre, Turno = 0, Fecha = "", Hora = "", FechaCorte = "", Bomba = preset.Bomba, ImporteDespacho = 0, DolaresRecibidos = preset.UsdRecibidos, TipoCambio = preset.TipoCambio, CambioUSD = preset.CambioUSD, CambioMXN = preset.CambioMXN, FechaCG = 0, CardNumber = preset.CardNumber, Cliente = preset.Cliente, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Empresa = preset.Empresa, LitrosRedimir = preset.LitrosRedimir, Descuento = preset.Descuento};
                     clientApp.USD.Detalle = new List<PresetDolaresDetAppGTDTO>();
                     clientApp.USD.Detalle.Add(new PresetDolaresDetAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, Despacho = 0, Producto = 0, Cantidad = 0, Descripcion = "", Precio = 0, Subtotal = 0, IVA = 0, IEPS = 0, Total = 0, CuotaIEPS = 0, TasaIVA = 0 });
                     clientApp.acumular = new PresetAcumularAppGTDTO();
@@ -221,9 +221,11 @@ namespace ADDESAPI.Infrastructure
                 }
                 else if (preset.TipoPago == 0 && preset.Moneda == "USD" && preset.Descuento > 0)
                 {
-                    clientApp.Tipo = 5;
+                    clientApp.Tipo = 3;
                     clientApp.jarreoApp = new PresetJarreoAppGTDTO();
-                    clientApp.USD = new PresetDolaresAppGTDTO();
+                    clientApp.USD = new PresetDolaresAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, NoEmpleado = preset.NoEmpleado, Nombre = preset.Nombre, Turno = 0, Fecha = "", Hora = "", FechaCorte = "", Bomba = preset.Bomba, ImporteDespacho = 0, DolaresRecibidos = preset.UsdRecibidos, TipoCambio = preset.TipoCambio, CambioUSD = preset.CambioUSD, CambioMXN = preset.CambioMXN, FechaCG = 0, CardNumber = preset.CardNumber, Cliente = preset.Cliente, ProgramId = preset.ProgramId, BrandId = preset.BrandId, Empresa = preset.Empresa, LitrosRedimir = preset.LitrosRedimir, Descuento = preset.Descuento, PromoDesc = "Combustible" };
+                    clientApp.USD.Detalle = new List<PresetDolaresDetAppGTDTO>();
+                    clientApp.USD.Detalle.Add(new PresetDolaresDetAppGTDTO { Estacion = _estacion, Gasolinera = _gasolinera, Transaccion = 0, Despacho = 0, Producto = 0, Cantidad = 0, Descripcion = "", Precio = 0, Subtotal = 0, IVA = 0, IEPS = 0, Total = 0, CuotaIEPS = 0, TasaIVA = 0 });
                     clientApp.acumular = new PresetAcumularAppGTDTO();
                     clientApp.redimir = new PresetRedimirAppGTDTO();
                 }

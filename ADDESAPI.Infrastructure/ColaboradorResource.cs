@@ -139,6 +139,37 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-       
+        public async Task<ResultSingle<ColaboradoresDTO>> GetColaborador(string user)
+        {
+            ResultSingle<ColaboradoresDTO> Result = new ResultSingle<ColaboradoresDTO>();
+            try
+            {
+                string sql = $"SELECT * FROM vColaborador WHERE NoEstacion = {_estacion} AND Usuario = '{user}'";
+
+                using var connection = new SqlConnection(_connectionString);
+                var req = await connection.ExecuteQueryAsync<ColaboradoresDTO>(sql);
+
+                if (req == null || req.Count() == 0)
+                {
+                    Result.Success = false;
+                    Result.Error = "Error al obtener el empleado";
+                    Result.Message = $"No se encontro el usuario {user}";
+                }
+                else
+                {
+                    Result.Success = true;
+                    Result.Error = "";
+                    Result.Message = "Registros encontrados";
+                    Result.Data = req.FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                Result.Success = false;
+                Result.Error = "";
+                Result.Message = ex.Message;
+            }
+            return Result;
+        }
     }
 }

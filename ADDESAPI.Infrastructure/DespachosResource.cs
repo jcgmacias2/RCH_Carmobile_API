@@ -1,6 +1,7 @@
 ﻿using ADDESAPI.Core;
 using ADDESAPI.Core.DespachosCQRS;
 using ADDESAPI.Core.DespachosCQRS.DTO;
+using ADDESAPI.Core.EstacionCQRS.DTO;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using RepoDb;
@@ -47,43 +48,72 @@ namespace ADDESAPI.Infrastructure
             ResultMultiple<DespachoAppDTO> Result = new ResultMultiple<DespachoAppDTO>();
             try
             {
-                string sql = @"
-                SELECT x.*
-	                , (SELECT TOP 1 Descripcion FROM vDespachos p WHERE x.Transaccion = p.Despacho AND Descripcion != '' ORDER BY Transaccion) 'Descripcion'
-	                , (SELECT COUNT(*) FROM vDespachos p WHERE Producto NOT IN (62, 63, 64) AND x.Transaccion = p.Despacho) 'Productos'
-                FROM (
-	                SELECT TOP 3 Despacho 'Transaccion'
-		                , Gasolinera
-		                , Turno
-		                , Fecha
-		                , Hora
-		                , Bomba
-		                , TipoPago
-		                , IdTipoPago
-		                , SUM(Total) Total
-	                FROM vDespachos d 
-	                WHERE Gasolinera = @Gasolinera AND Bomba = @Bomba 
-	                GROUP BY Despacho, Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago,  FechaHora 
-	                ORDER BY FechaHora DESC
-                ) x
-                ORDER BY Transaccion DESC";
-                var parameters = new { Gasolinera = _gasolinera, Bomba = bomba };
-                using var connection = new SqlConnection(_connectionString);
-                var req = await connection.ExecuteQueryAsync<DespachoAppDTO>(sql, parameters);
-
-                if (req == null || req.Count() == 0)
+                if (_estacion == 6611)
                 {
-                    Result.Success = false;
-                    Result.Error = "";
-                    Result.Message = "No se encontraron registros";
+                    using var connection = new SqlConnection(_connectionString);
+                    {
+                        var result = connection.ExecuteQuery<DespachoAppDTO>("EXEC [dbo].[SP_DESPACHOS] @Gasolinera, @Bomba",
+                                            new { Gasolinera = _gasolinera, Bomba = bomba }
+                                            ).ToList();
+                        if (result != null && result.Any())
+                        {
+                            Result.Success = true;
+                            Result.Data = result.ToList();
+                        }
+                        else
+                        {
+                            Result.Success = false;
+                            Result.Message = "No se encontraron registros";
+                        }
+                    }
                 }
                 else
                 {
-                    Result.Success = true;
-                    Result.Error = "";
-                    Result.Message = "Registros encontrados";
-                    Result.Data = req.ToList();
+                    string sql = @"
+                    SELECT x.*
+	                    , (SELECT TOP 1 Descripcion FROM vDespachos p WHERE x.Transaccion = p.Despacho AND Descripcion != '' ORDER BY Transaccion) 'Descripcion'
+	                    , (SELECT COUNT(*) FROM vDespachos p WHERE Producto NOT IN (62, 63, 64) AND x.Transaccion = p.Despacho) 'Productos'
+                    FROM (
+	                    SELECT TOP 3 Despacho 'Transaccion'
+		                    , Gasolinera
+		                    , Turno
+		                    , Fecha
+		                    , Hora
+		                    , Bomba
+		                    , TipoPago
+		                    , IdTipoPago
+		                    , SUM(Total) Total
+                            , ISNULL(CardNumber, '') 'CardNumber'
+		                    , ISNULL(NombreCliente, '') 'NombreCliente'
+		                    , ISNULL(Descuento, 0) 'Descuento'
+		                    , ISNULL(litrosRedimidos, 0) 'litrosRedimidos'
+		                    , ISNULL(PromoDesc, '') 'PromoDesc'
+		                    , ISNULL(PromoCode, '') 'PromoCode'
+	                    FROM vDespachos d 
+	                    WHERE Gasolinera = @Gasolinera AND Bomba = @Bomba 
+	                    GROUP BY Despacho, Gasolinera, Turno, Fecha, Hora, Bomba, TipoPago, IdTipoPago, FechaHora, CardNumber, NombreCliente, Descuento, litrosRedimidos, PromoDesc, PromoCode
+	                    ORDER BY FechaHora DESC
+                    ) x
+                    ORDER BY Transaccion DESC";
+                    var parameters = new { Gasolinera = _gasolinera, Bomba = bomba };
+                    using var connection = new SqlConnection(_connectionString);
+                    var req = await connection.ExecuteQueryAsync<DespachoAppDTO>(sql, parameters);
+
+                    if (req == null || req.Count() == 0)
+                    {
+                        Result.Success = false;
+                        Result.Error = "";
+                        Result.Message = "No se encontraron registros";
+                    }
+                    else
+                    {
+                        Result.Success = true;
+                        Result.Error = "";
+                        Result.Message = "Registros encontrados";
+                        Result.Data = req.ToList();
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -210,23 +240,47 @@ namespace ADDESAPI.Infrastructure
             try
             {
                 using var connection = new SqlConnection(_connectionString);
-                //var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
-                string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
-                var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
 
-                if (req == null || req.Count() == 0)
+                if (_estacion == 6611)
                 {
-                    Result.Success = false;
-                    Result.Error = "";
-                    Result.Message = "No se encontraron registros";
+                    string sql = GetQueryBlas(despacho.ToString());
+                    var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
+
+                    if (req == null || req.Count() == 0)
+                    {
+                        Result.Success = false;
+                        Result.Error = "";
+                        Result.Message = "No se encontraron registros";
+                    }
+                    else
+                    {
+                        Result.Success = true;
+                        Result.Error = "";
+                        Result.Message = "Registros encontrados";
+                        Result.Data = req.FirstOrDefault();
+                    }
+
                 }
                 else
                 {
-                    Result.Success = true;
-                    Result.Error = "";
-                    Result.Message = "Registros encontrados";
-                    Result.Data = req.FirstOrDefault();
+                    string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
+                    var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
+
+                    if (req == null || req.Count() == 0)
+                    {
+                        Result.Success = false;
+                        Result.Error = "";
+                        Result.Message = "No se encontraron registros";
+                    }
+                    else
+                    {
+                        Result.Success = true;
+                        Result.Error = "";
+                        Result.Message = "Registros encontrados";
+                        Result.Data = req.FirstOrDefault();
+                    }
                 }
+               
             }
             catch (Exception ex)
             {
@@ -242,23 +296,45 @@ namespace ADDESAPI.Infrastructure
             try
             {
                 using var connection = new SqlConnection(_connectionString);
-                //var req = await connection.QueryAsync<vDespachos>(r => r.Gasolinera == _gasolinera && r.Despacho == despacho);
-                string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
-                var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
-
-                if (req == null || req.Count() == 0)
+                if (_estacion == 6611)
                 {
-                    Result.Success = false;
-                    Result.Error = "";
-                    Result.Message = "No se encontro el detalle del despacho";
+                    string sql = GetQueryBlas(despacho.ToString());
+                    var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
+
+                    if (req == null || req.Count() == 0)
+                    {
+                        Result.Success = false;
+                        Result.Error = "";
+                        Result.Message = "No se encontraron registros";
+                    }
+                    else
+                    {
+                        Result.Success = true;
+                        Result.Error = "";
+                        Result.Message = "Registros encontrados";
+                        Result.Data = req.ToList();
+                    }
                 }
                 else
                 {
-                    Result.Success = true;
-                    Result.Error = "";
-                    Result.Message = "Registros encontrados";
-                    Result.Data = req.ToList();
+                    string sql = $"SELECT * FROM vDespachos WHERE Gasolinera = {_gasolinera} AND Despacho = {despacho}";
+                    var req = await connection.ExecuteQueryAsync<vDespachos>(sql);
+
+                    if (req == null || req.Count() == 0)
+                    {
+                        Result.Success = false;
+                        Result.Error = "";
+                        Result.Message = "No se encontro el detalle del despacho";
+                    }
+                    else
+                    {
+                        Result.Success = true;
+                        Result.Error = "";
+                        Result.Message = "Registros encontrados";
+                        Result.Data = req.ToList();
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
@@ -402,6 +478,60 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-       
+
+        public string GetQueryBlas(string despacho)
+        {
+            string sql = $@"SELECT d.nrotrn 'Transaccion' 
+	            , d.codgas 'Gasolinera'
+	            , e.est_id 'NoEstacion'
+	            , e.est_nombre 'Estacion'
+	            , d.nrotur 'Turno'	
+                , d.fchtrn 'FechaCG'
+	            , d.fchcor 'FchCor'
+	            , CAST(CAST(d.fchtrn as DATETIME) -1 AS DATE) 'Fecha'
+	            , CAST(CAST(d.fchcor as DATETIME) -1 AS DATE) 'FechaCorte'
+	            , SUBSTRING(CONVERT(CHAR(5), d.hratrn + 10000), 2, 2) + ':' + SUBSTRING(CONVERT(CHAR(5), d.hratrn + 10000), 4, 2) 'Hora'
+	            , CAST(CONVERT(VARCHAR, CAST(d.fchtrn as DATETIME) -1, 23) AS VARCHAR(10)) + ' ' + SUBSTRING(CONVERT(CHAR(5), d.hratrn + 10000), 2, 2) + ':' + SUBSTRING(CONVERT(CHAR(5), d.hratrn + 10000), 4, 2) + ':00'  'FechaHora'
+	            , d.nrobom 'Bomba'
+	            , b.Isla 'IslaID'
+	            , CASE WHEN d.tiptrn IN(0, 48, 49) THEN 'Efectivo' ELSE f.Descripcion END 'TipoPago'
+	            , CASE WHEN d.tiptrn IN(0, 48, 49) THEN 0 ELSE d.tiptrn END  'IdTipoPago'
+	            , CASE WHEN d.tiptrn IN(0, 48, 49) THEN '01' ELSE f.ClaveSAT END 'FormaPagoSAT'
+	            , d.can 'Cantidad'
+	            , d.pre 'Precio'
+                , d.mto 'Total'
+	            , d.codcli 'Cliente'
+	            , ISNULL(d.satuid, '') 'UUID' 
+	            , p.cod 'Producto'
+	            , RTRIM(LTRIM(p.den)) 'Descripcion'
+	            , p.uni 'Unidad'
+	            , d.lognew 'lognew' 
+	            , g.nropcc 'PermisoCRE'
+	            , SUBSTRING(CAST(d.nrotrn AS VARCHAR(25)), 1, LEN(d.nrotrn) -1) 'Despacho'
+	            , CASE WHEN p.cod in (1, 2, 16, 62, 63, 64) THEN 'LTR' ELSE 'H87' END 'ClaveUnidad' 
+	            , p.codsat 'ClaveProdServ'
+	            , est_rfc 'RFC'
+	            , RazonSocial 'RazonSocial'
+	            , est_direccion 'Direccion'
+	            , e.RazonSocialDom 'DomicilioFiscal'
+	            , d.codres 'NoEmpleado'
+	            , c.Nombre 'Vendedor'
+	            , x.CardNumber
+	            , x.NombreCliente
+	            , x.Descuento
+	            , x.litrosRedimidos
+	            , x.PromoCode
+	            , x.PromoDesc
+            FROM [CG].dbo.Despachos d (NOLOCK)
+	            LEFT JOIN [CG].dbo.Productos p(NOLOCK) ON d.codprd = p.cod
+	            LEFT JOIN [CG].dbo.Gasolineras g (NOLOCK) ON d.codgas = g.cod
+	            LEFT JOIN [CG].dbo.HTI_Descuentos x(NOLOCK) ON d.nrotrn = x.Transaccion
+	            LEFT JOIN [ADDES].dbo.[FormaPago] f (NOLOCK) ON f.ClaveCG = d.tiptrn
+	            LEFT JOIN [ADDES].dbo.[Estaciones] e(NOLOCK) ON d.codgas = e.est_codigo_gas
+	            LEFT JOIN [ADDES].dbo.[vBombas] b(NOLOCK) ON d.nrobom = b.Numero AND e.est_id = b.Estacion
+	            LEFT JOIN [ADDES].dbo.[vColaborador] c(NOLOCK) ON d.codres = c.NumeroVentuk
+            WHERE d.codgas = {_gasolinera} AND SUBSTRING(CAST(d.nrotrn AS VARCHAR(25)), 1, LEN(d.nrotrn) -1) = {despacho}";
+            return sql;
+        }
     }
 }

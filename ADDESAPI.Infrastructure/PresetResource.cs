@@ -156,19 +156,24 @@ namespace ADDESAPI.Infrastructure
             }
             return Result;
         }
-        public async Task<ResultMultiple<Preset>> GetPresets(int pageSize, int page, int bomba)
+        public async Task<ResultMultiple<Preset>> GetPresets(int pageSize, int page, int bomba, int noEmpleado)
         {
             ResultMultiple<Preset> Result = new ResultMultiple<Preset> ();
             try
             {
                 string sql = @$"
+                    IF OBJECT_ID('tempdb..#Presets') IS NOT NULL DROP TABLE #Presets
+                    CREATE TABLE #Presets (Consecutivo INT IDENTITY(1,1), Id INT, Gasolinera INT, Bomba INT, UMedida INT, Grado INT, Cantidad FLOAT, Total FLOAT, NoEmpleado INT, Vendedor VARCHAR(150), IdTipoPago INT, Moneda VARCHAR(10), Fecha DATETIME, Estatus INT, Error VARCHAR(5000), CardNumber VARCHAR(50), LitrosRedimir INT, Descuento FLOAT)
+                    INSERT INTO #Presets
+                    SELECT TOP 100 * FROM Preset  WHERE Bomba = {bomba} AND NoEmpleado = {noEmpleado} ORDER BY id DESC
+
                     DECLARE @PageSize	INT = {pageSize},
 		                    @Page		INT = {page},
 		                    @Max		INT,
 		                    @Current	INT
-                    SELECT @Max = MAX(Id) FROM Preset
-                    SELECT @Current = @Max - (@PageSize * @Page)
-                    SELECT TOP {pageSize} * FROM Preset WHERE Id <= @Current AND Bomba = {bomba} ORDER BY Id DESC";
+                    SELECT @Max = MIN(Consecutivo) FROM #Presets
+                    SELECT @Current = @Max + (@PageSize * (@Page -1))
+                    SELECT TOP {pageSize} * FROM #Presets WHERE Consecutivo >= @Current ORDER BY Id DESC";
 
                 using (var connection = new SqlConnection(_connectionString))
                 {

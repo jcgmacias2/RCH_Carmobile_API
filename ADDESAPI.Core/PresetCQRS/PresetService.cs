@@ -1,4 +1,5 @@
-﻿using ADDESAPI.Core.PresetCQRS.DTO;
+﻿using ADDESAPI.Core.Colaborador;
+using ADDESAPI.Core.PresetCQRS.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,16 @@ namespace ADDESAPI.Core.PresetCQRS
     public class PresetService : IPresetService
     {
         private readonly IPresetResource _resource;
+        private readonly IColaboradorResource _resourceColaborador;
 
-        public PresetService(IPresetResource resource)
+        public PresetService(IPresetResource resource, IColaboradorResource resourceColaborador)
         {
             _resource = resource;
+            _resourceColaborador = resourceColaborador;
 
         }
 
-        public async Task<ResultMultiple<Preset>> GetPresets(GetPresetsDTO req)
+        public async Task<ResultMultiple<Preset>> GetPresets(GetPresetsDTO req, string user)
         {
             ResultMultiple < Preset > Result = new ResultMultiple<Preset>();
             try
@@ -38,7 +41,17 @@ namespace ADDESAPI.Core.PresetCQRS
                     return Result;
                 }
 
-                Result = await _resource.GetPresets(req.PageSize, req.Page, req.Bomba);
+                var ResultC = await _resourceColaborador.GetColaborador(user);
+                if (!ResultC.Success) 
+                {
+                    Result.Success = ResultValidate.Success;
+                    Result.Error = ResultValidate.Error;
+                    Result.Message = ResultValidate.Message;
+                    return Result;
+                }
+                var Colaborador = ResultC.Data;
+
+                Result = await _resource.GetPresets(req.PageSize, req.Page, req.Bomba, Colaborador.NumeroVentuk);
             }
             catch (Exception ex)
             {

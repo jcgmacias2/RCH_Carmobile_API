@@ -110,7 +110,7 @@ builder.Services.AddCors(o =>
 
 builder.Services.AddSwaggerGen(option =>
 {
-    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.1.5" });
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "ADDES WebApi", Version = "v1.1.9" });
     option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

@@ -3,148 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\fajillaresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\fajillaresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\estacioncqrs\\estacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\estacioncqrs\\estacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\tipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\tipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\gtcqrs\\gtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\gtcqrs\\gtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\gtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\gtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\estacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\estacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\estacioncqrs\\iestacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\estacioncqrs\\iestacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\tipocambiodto\\itipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\tipocambiodto\\itipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\presetcqrs\\dto\\preset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\presetcqrs\\dto\\preset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\presetcqrs\\ipresetresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\presetcqrs\\ipresetresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\presetcqrs\\dto\\getpresetsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\presetcqrs\\dto\\getpresetsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\presetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\presetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\presetcqrs\\ipresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\presetcqrs\\ipresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\gtcqrs\\igtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\gtcqrs\\igtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\gtcqrs\\igtresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\gtcqrs\\igtresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\despachoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\despachoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\despachoscqrs\\despachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\despachoscqrs\\despachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\colaboradorcqrs\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\colaboradorcqrs\\colaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\despachoscqrs\\dto\\redemptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\despachoscqrs\\dto\\redemptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\estacioncqrs\\iestacionresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\estacioncqrs\\iestacionresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\producocqrs\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\producocqrs\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\producocqrs\\iproductoresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\producocqrs\\iproductoresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\producocqrs\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\producocqrs\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\despachoscqrs\\idespachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\despachoscqrs\\idespachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\colaboradorcqrs\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\colaboradorcqrs\\dto\\colaboradordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\tanquecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\tanquecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\cortecqrs\\corteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\cortecqrs\\corteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\colaboradorcqrs\\icolaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\colaboradorcqrs\\icolaboradorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\asignacioncqrs\\asignacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\asignacioncqrs\\asignacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\asignacioncqrs\\dto\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\asignacioncqrs\\dto\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\asignacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\asignacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\modulocqrs\\dto\\modulodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\modulocqrs\\dto\\modulodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\asignacioncqrs\\asignacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\asignacioncqrs\\asignacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\gtcqrs\\dto\\descuentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\gtcqrs\\dto\\descuentodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\asignacionresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\asignacionresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\gtcqrs\\gtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\gtcqrs\\gtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\despachoscqrs\\despachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\despachoscqrs\\despachosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\despachosresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\despachosresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\despachoscqrs\\dto\\despachodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\despachoscqrs\\dto\\despachodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\gtresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\gtresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\despachoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\despachoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\presetcqrs\\dto\\preset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\presetcqrs\\dto\\preset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.infrastructure\\tipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F46DEF5-E22C-4202-85BF-F4D85FC11EB5}|ADDESAPI.Infrastructure\\ADDESAPI.Infrastructure.csproj|solutionrelative:addesapi.infrastructure\\tipocambioresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\addesapi.core\\estacioncqrs\\estacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD26CA2-410A-414F-B88D-CBECC868B154}|ADDESAPI.Core\\ADDESAPI.Core.csproj|solutionrelative:addesapi.core\\estacioncqrs\\estacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\estacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\estacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|c:\\users\\admin\\documents\\github\\rch_carmobile_api\\adees_api\\controllers\\cortecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91A7A13A-0863-406C-9FEA-D036BBCF0986}|ADEES_API\\ADEES_API.WebAPI.csproj|solutionrelative:adees_api\\controllers\\cortecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,455 +74,215 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GTService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\GTService.cs",
               "RelativeDocumentMoniker": "ADDESAPI.Core\\GTCQRS\\GTService.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\GTService.cs",
               "RelativeToolTip": "ADDESAPI.Core\\GTCQRS\\GTService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALEAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T20:07:03.163Z",
+              "WhenOpened": "2025-02-07T19:19:25.722Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Preset.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\DTO\\Preset.cs",
               "RelativeDocumentMoniker": "ADDESAPI.Core\\PresetCQRS\\DTO\\Preset.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\DTO\\Preset.cs",
               "RelativeToolTip": "ADDESAPI.Core\\PresetCQRS\\DTO\\Preset.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAA5wIQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T04:48:11.025Z",
+              "WhenOpened": "2025-02-07T19:21:14.481Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IGTService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\IGTService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\GTCQRS\\IGTService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\IGTService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\GTCQRS\\IGTService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "DespachosResource.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\DespachosResource.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\DespachosResource.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\DespachosResource.cs",
+              "RelativeToolTip": "ADDESAPI.Infrastructure\\DespachosResource.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAIwCQBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T03:12:04.791Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PresetController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\PresetController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\PresetController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\PresetController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\PresetController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T01:18:12.681Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GTController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\GTController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\GTController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\GTController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\GTController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T01:55:37.009Z",
+              "WhenOpened": "2025-01-24T20:46:10.897Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EstacionService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAqwAMBAAAMAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "DespachosService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
+              "RelativeToolTip": "ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T20:07:38.491Z",
+              "WhenOpened": "2025-01-24T20:45:49.108Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TipoCambioResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\TipoCambioResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\TipoCambioResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\TipoCambioResource.cs",
-              "RelativeToolTip": "ADDESAPI.Infrastructure\\TipoCambioResource.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAowHYAAAARAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DespachoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DTO\\DespachoDTO.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Core\\DespachosCQRS\\DTO\\DespachoDTO.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DTO\\DespachoDTO.cs",
+              "RelativeToolTip": "ADDESAPI.Core\\DespachosCQRS\\DTO\\DespachoDTO.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowEcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:25:11.652Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-24T20:55:11.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FajillaResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\FajillaResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\FajillaResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\FajillaResource.cs",
-              "RelativeToolTip": "ADDESAPI.Infrastructure\\FajillaResource.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAgwHsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T21:37:56.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\appsettings.json",
               "RelativeDocumentMoniker": "ADEES_API\\appsettings.json",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\appsettings.json",
               "RelativeToolTip": "ADEES_API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-09-04T00:33:56.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EstacionController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\EstacionController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\EstacionController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\EstacionController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\EstacionController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAwwD0AAAAyAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AsignacionResource.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\AsignacionResource.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\AsignacionResource.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\AsignacionResource.cs",
+              "RelativeToolTip": "ADDESAPI.Infrastructure\\AsignacionResource.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowFYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T21:54:56.305Z",
+              "WhenOpened": "2025-02-26T03:48:27.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IEstacionService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\IEstacionService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\EstacionCQRS\\IEstacionService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\IEstacionService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\EstacionCQRS\\IEstacionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Program.cs",
+              "RelativeDocumentMoniker": "ADEES_API\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Program.cs",
+              "RelativeToolTip": "ADEES_API\\Program.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHAAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:32:24.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ITipoCambioResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\TipoCambioDTO\\ITipoCambioResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\TipoCambioDTO\\ITipoCambioResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\TipoCambioDTO\\ITipoCambioResource.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\TipoCambioDTO\\ITipoCambioResource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T23:27:54.779Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IPresetResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\IPresetResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\PresetCQRS\\IPresetResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\IPresetResource.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\PresetCQRS\\IPresetResource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T23:28:29.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GetPresetsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\DTO\\GetPresetsDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\PresetCQRS\\DTO\\GetPresetsDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\DTO\\GetPresetsDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\PresetCQRS\\DTO\\GetPresetsDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T02:51:23.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IPresetService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\IPresetService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\PresetCQRS\\IPresetService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\PresetCQRS\\IPresetService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\PresetCQRS\\IPresetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T01:13:37.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IGTResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\IGTResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\GTCQRS\\IGTResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\IGTResource.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\GTCQRS\\IGTResource.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBgAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T22:55:39.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DespachosController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\DespachosController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\DespachosController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\DespachosController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\DespachosController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T03:18:40.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DespachosService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\DespachosCQRS\\DespachosService.cs",
-              "ViewState": "AgIAAGYBAAAAAAAAAAAwwJgBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-07T20:58:27.695Z",
+              "WhenOpened": "2025-02-20T01:34:48.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAvwBgAAAAjAAAA",
+              "DocumentIndex": 9,
+              "Title": "GTResource.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\GTResource.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\GTResource.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\GTResource.cs",
+              "RelativeToolTip": "ADDESAPI.Infrastructure\\GTResource.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAUwDsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T23:21:34.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RedemptionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DTO\\RedemptionDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\DespachosCQRS\\DTO\\RedemptionDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\DTO\\RedemptionDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\DespachosCQRS\\DTO\\RedemptionDTO.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAywCkAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T03:27:22.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CorteService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\CorteCQRS\\CorteService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\CorteCQRS\\CorteService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\CorteCQRS\\CorteService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\CorteCQRS\\CorteService.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAwGcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:19:15.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ColaboradorService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\ColaboradorService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ColaboradorCQRS\\ColaboradorService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\ColaboradorService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ColaboradorCQRS\\ColaboradorService.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAAHsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T21:29:16.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "TanqueController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\TanqueController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\TanqueController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\TanqueController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\TanqueController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T20:57:27.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ColaboradorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\DTO\\ColaboradorDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ColaboradorCQRS\\DTO\\ColaboradorDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\DTO\\ColaboradorDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ColaboradorCQRS\\DTO\\ColaboradorDTO.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABkAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T05:53:50.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\ProductoService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ProducoCQRS\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\ProductoService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ProducoCQRS\\ProductoService.cs",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAIwHMBAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T23:11:31.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IEstacionResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\IEstacionResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\EstacionCQRS\\IEstacionResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\IEstacionResource.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\EstacionCQRS\\IEstacionResource.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T22:54:26.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "ADEES_API\\Controllers\\ProductoController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA8wDgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T22:17:27.437Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IProductoResource.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\IProductoResource.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ProducoCQRS\\IProductoResource.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\IProductoResource.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ProducoCQRS\\IProductoResource.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T23:11:13.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\IProductoService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ProducoCQRS\\IProductoService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ProducoCQRS\\IProductoService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ProducoCQRS\\IProductoService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T00:00:46.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IDespachosService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\IDespachosService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\DespachosCQRS\\IDespachosService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\DespachosCQRS\\IDespachosService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\DespachosCQRS\\IDespachosService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:18:05.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AsignacionService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAUwH8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T21:53:06.174Z",
+              "WhenOpened": "2025-02-12T19:03:35.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "RequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\DTO\\RequestDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\AsignacionCQRS\\DTO\\RequestDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\DTO\\RequestDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\AsignacionCQRS\\DTO\\RequestDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T06:01:21.775Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IColaboradorService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\IColaboradorService.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ColaboradorCQRS\\IColaboradorService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ColaboradorCQRS\\IColaboradorService.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ColaboradorCQRS\\IColaboradorService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T22:51:14.578Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 1,
               "Title": "AsignacionController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\AsignacionController.cs",
               "RelativeDocumentMoniker": "ADEES_API\\Controllers\\AsignacionController.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\AsignacionController.cs",
               "RelativeToolTip": "ADEES_API\\Controllers\\AsignacionController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAABBAAAA",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwCEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T17:40:00.133Z"
+              "WhenOpened": "2025-02-26T03:47:54.279Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ModuloDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ModuloCQRS\\DTO\\ModuloDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\ModuloCQRS\\DTO\\ModuloDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\ModuloCQRS\\DTO\\ModuloDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\ModuloCQRS\\DTO\\ModuloDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "DocumentIndex": 2,
+              "Title": "AsignacionService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
+              "RelativeToolTip": "ADDESAPI.Core\\AsignacionCQRS\\AsignacionService.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowIAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T05:46:43.753Z"
+              "WhenOpened": "2025-02-26T03:53:03.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "DescuentoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\DTO\\DescuentoDTO.cs",
-              "RelativeDocumentMoniker": "ADDESAPI.Core\\GTCQRS\\DTO\\DescuentoDTO.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\GTCQRS\\DTO\\DescuentoDTO.cs",
-              "RelativeToolTip": "ADDESAPI.Core\\GTCQRS\\DTO\\DescuentoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAFAAAA",
+              "DocumentIndex": 15,
+              "Title": "CorteController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\CorteController.cs",
+              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\CorteController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\CorteController.cs",
+              "RelativeToolTip": "ADEES_API\\Controllers\\CorteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T23:17:44.949Z"
+              "WhenOpened": "2025-02-01T00:29:12.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DespachosController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\DespachosController.cs",
+              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\DespachosController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\DespachosController.cs",
+              "RelativeToolTip": "ADEES_API\\Controllers\\DespachosController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T20:45:41.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TipoCambioResource.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\TipoCambioResource.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Infrastructure\\TipoCambioResource.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Infrastructure\\TipoCambioResource.cs",
+              "RelativeToolTip": "ADDESAPI.Infrastructure\\TipoCambioResource.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwEgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T19:01:16.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EstacionController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\EstacionController.cs",
+              "RelativeDocumentMoniker": "ADEES_API\\Controllers\\EstacionController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADEES_API\\Controllers\\EstacionController.cs",
+              "RelativeToolTip": "ADEES_API\\Controllers\\EstacionController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwD8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T19:01:16.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EstacionService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
+              "RelativeDocumentMoniker": "ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\RCH_Carmobile_API\\ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
+              "RelativeToolTip": "ADDESAPI.Core\\EstacionCQRS\\EstacionService.cs",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAAwA8BAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T19:01:16Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -23,7 +23,9 @@ namespace ADEES_API.WebAPI.Controllers
         [Route("[action]")]
         public async Task<ResultMultiple<Preset>> GetPresets(GetPresetsDTO req)
         {
-            return await _service.GetPresets(req);
+            var user = HttpContext.User;
+            string userName = user.Claims.FirstOrDefault(c => c.Type.EndsWith("/name"))?.Value;
+            return await _service.GetPresets(req, userName);
         }
     }
 }

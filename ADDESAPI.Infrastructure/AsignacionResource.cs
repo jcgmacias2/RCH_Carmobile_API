@@ -64,9 +64,10 @@ namespace ADDESAPI.Infrastructure
 
                 if (req == null || req.Count() == 0)
                 {
-                    Result.Success = false;
-                    Result.Error = "Error";
+                    Result.Success = true;
+                    Result.Error = "";
                     Result.Message = "No se encotro asignación de bombas";
+                    Result.Data = new List<vAsignacion>();
                 }
                 else
                 {

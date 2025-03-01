@@ -11,6 +11,6 @@ namespace ADDESAPI.Core.PresetCQRS
     {
         Task<Result> SavePreset(Preset request);
         Task<Result> PresetGatewayRes(PresetGatewayRes request);
-        Task<ResultMultiple<Preset>> GetPresets(int pageSize, int page, int bomba);
+        Task<ResultMultiple<Preset>> GetPresets(int pageSize, int page, int bomba, int noEmpleado);
     }
 }

@@ -137,7 +137,7 @@ namespace ADDESAPI.Core.DespachosCQRS
                 double tasaIVA = 0, cuotaIEPS = 0;
 
                 int transaccion  = int.Parse(req.Transaccion.ToString().Remove(req.Transaccion.ToString().Length - 1));
-                
+
 
                 var ResultDespacho = await _resource.GetDespacho(transaccion);
 
